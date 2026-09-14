@@ -1,4 +1,4 @@
-// FoodFindrr - Comprehensive Authentic Nigerian Food, Restaurant & Recipe Dataset
+// FoodFindrr - Complete Authentic Nigerian Food, Restaurant & Recipe Dataset
 
 export const CITIES = [
   { id: 'lagos', name: 'Lagos', country: 'Nigeria', code: 'LOS', symbol: '₦' },
@@ -15,459 +15,626 @@ export const NEIGHBORHOODS = {
 };
 
 export const DIETARY_OPTIONS = [
-  { id: 'all', label: 'All Categories' },
+  { id: 'all', label: 'All Dishes' },
   { id: 'rice-grains', label: 'Rice & Grains' },
-  { id: 'swallow-soups', label: 'Swallow & Soups' },
+  { id: 'swallow-soups', label: 'Swallows & Soups' },
   { id: 'pepper-soups', label: 'Pepper Soups & Grills' },
+  { id: 'beans-yam', label: 'Beans & Yam Dishes' },
   { id: 'snacks-street', label: 'Snacks & Street Food' },
   { id: 'drinks-beverages', label: 'Drinks & Beverages' }
 ];
 
 export const MOCK_DISHES = [
-  // 1. SMOKEY PARTY JOLLOF RICE
+  // --- RICE & GRAINS ---
   {
-    id: 'dish-ng-1',
+    id: 'dish-1',
     cityId: 'lagos',
     category: 'rice-grains',
     name: 'Smokey Party Jollof Rice with Fried Plantain & Goat Meat',
-    restaurantId: 'rest-ng-1',
+    restaurantId: 'rest-1',
     restaurantName: 'Terra Kulture Restaurant',
     neighborhood: 'Victoria Island',
     price: 7500,
     signatureScore: 9.9,
     dietary: ['rice-grains', 'halal'],
     mealType: 'Lunch & Dinner',
-    mood: 'date-night',
-    description: 'Aromatic long-grain parboiled rice cooked in rich rodo-tatashe pepper reduction, wood-smoke seasoned, served with golden dodo and tender fried goat meat.',
-    chefNote: 'Infused with natural firewood smoke aroma using authentic cast-iron pots.',
+    description: 'Aromatic parboiled rice cooked in rich rodo-tatashe pepper reduction, wood-smoke seasoned, served with golden dodo and tender fried goat meat.',
     image: '/images/jollof_rice_dodo_1789406504058.png',
     mapCoords: { x: 42, y: 58 },
     recipe: {
       prepTime: '25 mins', cookTime: '45 mins', difficulty: 'Intermediate', servings: '6 servings',
-      ingredients: [
-        '4 cups Long Grain Parboiled Rice', '8 Red Bell Peppers (Tatashe)', '5 Scotch Bonnet Peppers (Rodo)',
-        '2 large Red Onions', '1 cup Palm Oil / Vegetable Oil', '3 tbsp Tomato Paste', '2 cups Beef/Goat Meat Stock',
-        '1 tbsp Thyme & Curry', '3 Bay Leaves & Seasoning', '1 kg Soft Goat Meat', '3 Ripe Plantains'
-      ],
-      instructions: [
-        'Blend peppers and onions, boil off excess water.', 'Fry sliced onions and tomato paste in oil for 5 mins.',
-        'Add blended pepper reduction and fry for 15 mins until oil rises.', 'Pour in rich goat broth, thyme, curry, and bay leaves.',
-        'Add washed rice, cover with foil and seal pot lid.', 'Cook low heat 30 mins, then turn heat high 5 mins to trap firewood smoke aroma.'
-      ],
-      proTip: 'Sealing the pot with foil paper traps steam and guarantees perfect non-soggy party Jollof rice.'
+      ingredients: ['4 cups Long Grain Rice', '8 Tatashe Peppers', '5 Scotch Bonnets', '1 cup Palm Oil', '1 kg Goat Meat', '3 Plantains'],
+      instructions: ['Blend peppers, boil off water.', 'Fry onions, tomato paste & pepper mix.', 'Add goat stock, spices & washed rice.', 'Cover with foil, cook low heat 30 mins, then high heat 5 mins for smoke aroma.'],
+      proTip: 'Sealing the pot with foil traps steam for perfect non-soggy party Jollof.'
     }
   },
-
-  // 2. NIGERIAN FRIED RICE
   {
-    id: 'dish-ng-2',
+    id: 'dish-2',
     cityId: 'lagos',
     category: 'rice-grains',
-    name: 'Special Nigerian Fried Rice with Fried Chicken & Dodo',
-    restaurantId: 'rest-ng-2',
+    name: 'Special Nigerian Fried Rice with Chicken & Dodo',
+    restaurantId: 'rest-2',
     restaurantName: 'Yellow Chilli',
     neighborhood: 'Ikoyi',
     price: 8000,
     signatureScore: 9.8,
     dietary: ['rice-grains', 'halal'],
     mealType: 'Lunch',
-    mood: 'date-night',
-    description: 'Savory turmeric rice stir-fried with diced carrots, sweet peas, liver chunks, sweet corn, and green peppers, paired with crispy seasoned chicken leg.',
-    chefNote: 'Stir-fried in small batches on high heat wok for crisp fresh vegetable bite.',
+    description: 'Savory turmeric rice stir-fried with diced carrots, sweet peas, liver chunks, sweet corn, and green peppers, paired with seasoned fried chicken leg.',
     image: '/images/fried_rice_1789414447905.png',
     mapCoords: { x: 55, y: 48 },
     recipe: {
       prepTime: '20 mins', cookTime: '30 mins', difficulty: 'Intermediate', servings: '4 servings',
-      ingredients: [
-        '3 cups Long Grain Parboiled Rice', '2 cups Rich Chicken Stock', '1 tbsp Curry Powder & Turmeric',
-        '1 cup Diced Carrots & Sweet Peas', '1/2 cup Sweet Corn', '200g Boiled Liver (diced)', '4 Seasoned Chicken Legs'
-      ],
-      instructions: [
-        'Parboil rice in rich seasoned chicken stock with curry and turmeric until 80% soft.',
-        'Heat vegetable oil in wok or wide pan.', 'Stir fry liver and chopped vegetables for 3 mins.',
-        'Add cooked rice in small batches, tossing continuously for 5 mins until fragrant.', 'Serve hot with deep-fried golden chicken leg and dodo.'
-      ],
-      proTip: 'Cool boiled rice completely before stir-frying to prevent grains from sticking together.'
+      ingredients: ['3 cups Parboiled Rice', '2 cups Chicken Stock', 'Curry & Turmeric', 'Carrots, Peas, Liver', '4 Chicken Legs'],
+      instructions: ['Parboil rice in stock with curry.', 'Stir-fry liver and vegetables in oil.', 'Combine rice and stir-fry in small batches.'],
+      proTip: 'Cool boiled rice completely before stir-frying so grains do not stick.'
     }
   },
-
-  // 3. POUNDED YAM & EGUSI SOUP
   {
-    id: 'dish-ng-3',
-    cityId: 'lagos',
-    category: 'swallow-soups',
-    name: 'Pounded Yam with Authentic Egusi Soup & Stockfish',
-    restaurantId: 'rest-ng-2',
-    restaurantName: 'Yellow Chilli',
-    neighborhood: 'Ikoyi',
-    price: 9500,
-    signatureScore: 9.8,
-    dietary: ['swallow-soups', 'halal'],
-    mealType: 'Dinner',
-    mood: 'group-feast',
-    description: 'Silky smooth hand-pounded white yam paired with rich melon seed soup braised with dried stockfish head, bitter leaf, crayfish, and assorted meats.',
-    chefNote: 'Ground melon seeds pan-roasted before simmer for deep nutty richness.',
-    image: '/images/egusi_pounded_yam_1789406535718.png',
-    mapCoords: { x: 50, y: 50 },
-    recipe: {
-      prepTime: '30 mins', cookTime: '50 mins', difficulty: 'Master Chef', servings: '4 servings',
-      ingredients: [
-        '3 cups Ground Melon Seeds (Egusi)', '1 medium Tuber White Yam', '1 cup Bleached Palm Oil',
-        '2 cups Ground Crayfish', '1 Stockfish Head', 'Fresh Ugu leaves', '2 tbsp Locust Beans (Iru)'
-      ],
-      instructions: [
-        'Boil assorted meats and stockfish until tender.', 'Mix ground egusi with warm water to form paste balls.',
-        'Fry egusi paste balls in hot palm oil with iru for 8 mins undisturbed.', 'Add broth, crayfish, and peppers; simmer 20 mins.',
-        'Stir in fresh ugu leaves.', 'Pound boiled yam until smooth and stretchy.'
-      ],
-      proTip: 'Frying egusi paste undisturbed creates delicious chunky morsels in the soup.'
-    }
-  },
-
-  // 4. EFO RIRO & POUNDED YAM
-  {
-    id: 'dish-ng-4',
-    cityId: 'lagos',
-    category: 'swallow-soups',
-    name: 'Efo Riro (Yoruba Spinach Stew) with Assorted Meats',
-    restaurantId: 'rest-ng-4',
-    restaurantName: 'Amala Shitta',
-    neighborhood: 'Surulere',
-    price: 7000,
-    signatureScore: 9.7,
-    dietary: ['swallow-soups', 'halal'],
-    mealType: 'Lunch & Dinner',
-    mood: 'buka-spot',
-    description: 'Vibrant Nigerian spinach stew cooked in palm oil, locust beans (iru), smoked shawa fish, dried crayfish, ponmo, and tender beef chunks.',
-    chefNote: 'Blanched spinach squeezed dry before adding to stew to preserve crisp texture.',
-    image: '/images/efo_riro_1789414560759.png',
-    mapCoords: { x: 38, y: 68 },
-    recipe: {
-      prepTime: '20 mins', cookTime: '35 mins', difficulty: 'Intermediate', servings: '4 servings',
-      ingredients: [
-        '2 bunches Fresh Spinach / Shoko / Tete', '1 cup Palm Oil', '2 tbsp Locust Beans (Iru)',
-        '6 Coarsely Blended Tatashe & Rodo Peppers', '2 cups Ground Crayfish', 'Assorted Meat & Ponmo'
-      ],
-      instructions: [
-        'Blanch spinach in hot water for 2 mins, shock in cold water and squeeze dry.',
-        'Fry sliced onions and iru in palm oil for 5 mins.', 'Add pepper reduction and fry 15 mins until oil floats.',
-        'Stir in meats, stockfish, crayfish, then fold in spinach for final 3 minutes.'
-      ],
-      proTip: 'Never overcook Efo Riro after adding vegetables to keep green color and vitamins intact.'
-    }
-  },
-
-  // 5. AMALA, EWEDU & GBEGIRI
-  {
-    id: 'dish-ng-5',
-    cityId: 'lagos',
-    category: 'swallow-soups',
-    name: 'Amala, Ewedu & Gbegiri (Lapo-Lapo Combo with Goat Meat)',
-    restaurantId: 'rest-ng-4',
-    restaurantName: 'Amala Shitta',
-    neighborhood: 'Surulere',
-    price: 5000,
-    signatureScore: 9.8,
-    dietary: ['swallow-soups', 'halal'],
-    mealType: 'Lunch',
-    mood: 'buka-spot',
-    description: 'Fluffy dark yam flour (Amala isu), vibrant slimy Ewedu jute leaf, silky yellow Gbegiri bean soup, and hot spicy buka stew with soft goat meat.',
-    chefNote: 'Ewedu whisked traditionally with Ijabe wooden broom for light airy texture.',
-    image: '/images/amala_ewedu_1789406591510.png',
-    mapCoords: { x: 38, y: 68 },
-    recipe: {
-      prepTime: '25 mins', cookTime: '40 mins', difficulty: 'Intermediate', servings: '4 servings',
-      ingredients: [
-        '2 cups Dark Yam Flour (Elubo Amala)', '2 cups Peeled Brown Beans (for Gbegiri)', '2 cups Fresh Jute Leaves (Ewedu)',
-        '1 cup Palm Oil', '2 tbsp Crayfish & Iru', 'Fried Goat Meat & Buka Pepper Stew'
-      ],
-      instructions: [
-        'Boil peeled beans until mushy, blend & sieve for yellow Gbegiri.', 'Whisk boiled Ewedu leaves with broom.',
-        'Whisk Elubo powder into boiling water for dark smooth Amala.', 'Serve hot with Gbegiri, Ewedu, and buka stew.'
-      ],
-      proTip: 'Serve piping hot; Amala is best enjoyed immediately after turning.'
-    }
-  },
-
-  // 6. OFADA RICE & AYAMASE
-  {
-    id: 'dish-ng-6',
+    id: 'dish-3',
     cityId: 'lagos',
     category: 'rice-grains',
     name: 'Ofada Rice with Ayamase (Green Pepper Stew & Boiled Egg)',
-    restaurantId: 'rest-ng-5',
+    restaurantId: 'rest-5',
     restaurantName: 'Bukka Hut',
     neighborhood: 'Lekki Phase 1',
     price: 6500,
     signatureScore: 9.6,
     dietary: ['rice-grains', 'halal'],
     mealType: 'Lunch',
-    mood: 'buka-spot',
-    description: 'Unpolished short-grain fermented local Ofada rice served in green plantain leaves with fiery bleached palm oil green pepper stew, assorted meat chunks, and hardboiled egg.',
-    chefNote: 'Palm oil bleached in covered pot until translucent brown for distinctive nutty flavor.',
+    description: 'Unpolished short-grain fermented local Ofada rice served in green plantain leaves with green pepper stew, assorted meat chunks, and boiled egg.',
     image: '/images/ofada_rice_1789406623409.png',
     mapCoords: { x: 72, y: 52 },
     recipe: {
       prepTime: '20 mins', cookTime: '50 mins', difficulty: 'Intermediate', servings: '4 servings',
-      ingredients: [
-        '3 cups Local Ofada Rice', '10 Green Tatashe Peppers', '6 Green Rodo Peppers', '1.5 cups Red Palm Oil',
-        '3 tbsp Iru', 'Assorted Meats & Hard-boiled Eggs'
-      ],
-      instructions: [
-        'Bleach palm oil covered for 10 mins until clear brown.', 'Fry onions and iru in oil.',
-        'Add green pepper paste and fry 20 mins until oil floats.', 'Fold in boiled meats and hard-boiled eggs.'
-      ],
-      proTip: 'Always let bleached palm oil cool covered before opening to avoid smoke.'
+      ingredients: ['3 cups Ofada Rice', '10 Green Tatashe Peppers', '1.5 cups Bleached Palm Oil', 'Locust Beans (Iru)', 'Assorted Meats & Eggs'],
+      instructions: ['Bleach palm oil covered until clear brown.', 'Fry onions, iru and coarse green pepper paste.', 'Stir in boiled meats and hardboiled eggs.'],
+      proTip: 'Let bleached palm oil cool covered before lifting lid.'
     }
   },
-
-  // 7. FISHERMAN SOUP
   {
-    id: 'dish-ng-7',
-    cityId: 'abuja',
-    category: 'swallow-soups',
-    name: 'Fisherman Soup with Fresh Catfish, Sea Prawns & Periwinkle',
-    restaurantId: 'rest-ng-6',
+    id: 'dish-4',
+    cityId: 'lagos',
+    category: 'rice-grains',
+    name: 'Authentic Nigerian Coconut Rice with Fried Fish',
+    restaurantId: 'rest-1',
+    restaurantName: 'Terra Kulture Restaurant',
+    neighborhood: 'Victoria Island',
+    price: 7500,
+    signatureScore: 9.7,
+    dietary: ['rice-grains', 'halal'],
+    mealType: 'Lunch & Dinner',
+    description: 'Long grain rice slow-steamed in fresh extracted coconut milk broth, dry crayfish, chopped peppers, and fried spiced Croaker fish.',
+    image: '/images/jollof_rice_dodo_1789406504058.png',
+    mapCoords: { x: 42, y: 58 }
+  },
+  {
+    id: 'dish-5',
+    cityId: 'phc',
+    category: 'rice-grains',
+    name: 'Delta Banga Rice (Palm Fruit Extract Rice) with Smoked Catfish',
+    restaurantId: 'rest-6',
     restaurantName: 'Nkoyo Restaurant',
     neighborhood: 'Maitama',
-    price: 13500,
+    price: 8500,
+    signatureScore: 9.8,
+    dietary: ['rice-grains'],
+    mealType: 'Lunch & Dinner',
+    description: 'Traditional Niger-Delta rice infused with rich palm fruit concentrates (Banga oil), oburun bebe spices, crayfish, and smoked catfish chunks.',
+    image: '/images/ofada_rice_1789406623409.png',
+    mapCoords: { x: 50, y: 45 }
+  },
+  {
+    id: 'dish-6',
+    cityId: 'lagos',
+    category: 'rice-grains',
+    name: 'Spicy Nigerian Pepper Rice with Fried Beef',
+    restaurantId: 'rest-5',
+    restaurantName: 'Bukka Hut',
+    neighborhood: 'Yaba',
+    price: 6000,
+    signatureScore: 9.5,
+    dietary: ['rice-grains', 'halal'],
+    mealType: 'Lunch',
+    description: 'White parboiled rice tossed in hot peppered oil sauce with chopped onions, scotch bonnets, and crispy fried peppered beef.',
+    image: '/images/jollof_rice_dodo_1789406504058.png',
+    mapCoords: { x: 48, y: 42 }
+  },
+
+  // --- SWALLOWS & SOUPS ---
+  {
+    id: 'dish-7',
+    cityId: 'lagos',
+    category: 'swallow-soups',
+    name: 'Pounded Yam with Authentic Egusi Soup & Stockfish',
+    restaurantId: 'rest-2',
+    restaurantName: 'Yellow Chilli',
+    neighborhood: 'Ikoyi',
+    price: 9500,
+    signatureScore: 9.8,
+    dietary: ['swallow-soups', 'halal'],
+    mealType: 'Dinner',
+    description: 'Silky smooth hand-pounded white yam paired with rich melon seed soup braised with dried stockfish head, bitter leaf, crayfish, and assorted meats.',
+    image: '/images/egusi_pounded_yam_1789406535718.png',
+    mapCoords: { x: 55, y: 48 }
+  },
+  {
+    id: 'dish-8',
+    cityId: 'lagos',
+    category: 'swallow-soups',
+    name: 'Yellow Eba with Ogbono Soup (Draw Soup) & Assorted Meat',
+    restaurantId: 'rest-4',
+    restaurantName: 'Amala Shitta',
+    neighborhood: 'Surulere',
+    price: 5500,
+    signatureScore: 9.6,
+    dietary: ['swallow-soups', 'halal'],
+    mealType: 'Lunch',
+    description: 'Golden Ijebu Garri Eba served with slippery aromatic wild mango seed (Ogbono) soup simmered with dried catfish, stockfish, and ponmo.',
+    image: '/images/efo_riro_1789414560759.png',
+    mapCoords: { x: 38, y: 68 }
+  },
+  {
+    id: 'dish-9',
+    cityId: 'phc',
+    category: 'swallow-soups',
+    name: 'Fufu with Bitter Leaf Soup (Ofe Onugbu) & Stockfish',
+    restaurantId: 'rest-6',
+    restaurantName: 'Nkoyo Restaurant',
+    neighborhood: 'Maitama',
+    price: 8000,
+    signatureScore: 9.7,
+    dietary: ['swallow-soups'],
+    mealType: 'Dinner',
+    description: 'Smooth cassava Fufu paired with deeply savory washed bitter leaf soup thickened with cocoyam, boiled stockfish, and ground crayfish.',
+    image: '/images/egusi_pounded_yam_1789406535718.png',
+    mapCoords: { x: 38, y: 32 }
+  },
+  {
+    id: 'dish-10',
+    cityId: 'lagos',
+    category: 'swallow-soups',
+    name: 'Amala, Ewedu & Gbegiri (Lapo-Lapo Combo with Goat Meat)',
+    restaurantId: 'rest-4',
+    restaurantName: 'Amala Shitta',
+    neighborhood: 'Surulere',
+    price: 5000,
+    signatureScore: 9.8,
+    dietary: ['swallow-soups', 'halal'],
+    mealType: 'Lunch',
+    description: 'Fluffy dark yam flour (Amala isu), vibrant slimy Ewedu jute leaf, silky yellow Gbegiri bean soup, and hot spicy buka stew with soft goat meat.',
+    image: '/images/amala_ewedu_1789406591510.png',
+    mapCoords: { x: 38, y: 68 }
+  },
+  {
+    id: 'dish-11',
+    cityId: 'lagos',
+    category: 'swallow-soups',
+    name: 'Efo Riro (Yoruba Spinach Stew) with Assorted Meats & Pounded Yam',
+    restaurantId: 'rest-4',
+    restaurantName: 'Amala Shitta',
+    neighborhood: 'Surulere',
+    price: 7000,
+    signatureScore: 9.7,
+    dietary: ['swallow-soups', 'halal'],
+    mealType: 'Lunch & Dinner',
+    description: 'Vibrant Nigerian spinach stew cooked in palm oil, locust beans (iru), smoked shawa fish, dried crayfish, ponmo, and tender beef chunks.',
+    image: '/images/efo_riro_1789414560759.png',
+    mapCoords: { x: 38, y: 68 }
+  },
+  {
+    id: 'dish-12',
+    cityId: 'phc',
+    category: 'swallow-soups',
+    name: 'Calabar Afang Soup with Dried Fish, Kpomo & Waterleaf',
+    restaurantId: 'rest-6',
+    restaurantName: 'Nkoyo Restaurant',
+    neighborhood: 'Maitama',
+    price: 9000,
+    signatureScore: 9.9,
+    dietary: ['swallow-soups'],
+    mealType: 'Dinner',
+    description: 'Rich Cross-River delicacy made with shredded wild Afang (Ukazi) leaves, fresh waterleaf, palm oil, periwinkles, and dried catfish.',
+    image: '/images/efo_riro_1789414560759.png',
+    mapCoords: { x: 38, y: 32 }
+  },
+  {
+    id: 'dish-13',
+    cityId: 'lagos',
+    category: 'swallow-soups',
+    name: 'Seafood & Meat Okra Soup (Ila Alasepo)',
+    restaurantId: 'rest-2',
+    restaurantName: 'Yellow Chilli',
+    neighborhood: 'Ikoyi',
+    price: 8500,
+    signatureScore: 9.7,
+    dietary: ['swallow-soups', 'pescatarian'],
+    mealType: 'Lunch',
+    description: 'Viscous diced fresh okra soup braised with crab claws, sea prawns, dried fish, crayfish, and palm oil.',
+    image: '/images/efo_riro_1789414560759.png',
+    mapCoords: { x: 55, y: 48 }
+  },
+  {
+    id: 'dish-14',
+    cityId: 'phc',
+    category: 'swallow-soups',
+    name: 'Delta Banga Soup (Ofe Akwu) with Starch & Fresh Fish',
+    restaurantId: 'rest-7',
+    restaurantName: 'Bantu Delicacies & Lounge',
+    neighborhood: 'Jabi',
+    price: 9500,
+    signatureScore: 9.8,
+    dietary: ['swallow-soups', 'pescatarian'],
+    mealType: 'Dinner',
+    description: 'Concentrated palm fruit extract soup boiled with beletiete Banga spices, dried catfish, fresh catfish steak, and stretchy yellow Starch.',
+    image: '/images/fisherman_soup_1789406664662.png',
+    mapCoords: { x: 58, y: 48 }
+  },
+  {
+    id: 'dish-15',
+    cityId: 'abuja',
+    category: 'swallow-soups',
+    name: 'Ofe Nsala (Igbo White Soup) with Catfish & Pounded Yam',
+    restaurantId: 'rest-6',
+    restaurantName: 'Nkoyo Restaurant',
+    neighborhood: 'Maitama',
+    price: 11000,
     signatureScore: 9.9,
     dietary: ['swallow-soups', 'pescatarian'],
     mealType: 'Dinner',
-    mood: 'date-night',
-    description: 'Rich Coastal Niger-Delta seafood broth simmered with fresh live catfish chunks, giant tiger prawns, unshelled periwinkles, fresh pepper, and oziza leaves.',
-    chefNote: 'Thickened naturally with cocoyam paste for velvet mouthfeel.',
+    description: 'Aromatic oil-free pepper soup thickened with pounded yam, fresh catfish, uziza seeds, and utazi herbs.',
     image: '/images/fisherman_soup_1789406664662.png',
-    mapCoords: { x: 38, y: 32 },
-    recipe: {
-      prepTime: '20 mins', cookTime: '30 mins', difficulty: 'Master Chef', servings: '4 servings',
-      ingredients: [
-        '1 Fresh Live Catfish', '8 Tiger Prawns', '1 cup Periwinkles', '3 Boiled Cocoyams (pounded paste)',
-        '1/2 cup Palm Oil', '3 tbsp Crayfish', 'Uziza Leaves'
-      ],
-      instructions: [
-        'Boil water with palm oil, pepper, crayfish, and cocoyam paste balls.',
-        'Add fresh catfish, prawns, and periwinkles gently.', 'Simmer low heat 15 mins without stirring aggressively.',
-        'Stir in fresh uziza leaves.'
-      ],
-      proTip: 'Shake the pot gently by handles rather than stirring catfish to keep steaks intact.'
-    }
+    mapCoords: { x: 38, y: 32 }
   },
 
-  // 8. BOLI & ROASTED TILAPIA FISH
+  // --- PEPPER SOUPS & GRILLS ---
   {
-    id: 'dish-ng-8',
-    cityId: 'abuja',
-    category: 'pepper-soups',
-    name: 'Boli (Roasted Plantain) & Charcoal Roasted Tilapia Fish',
-    restaurantId: 'rest-ng-7',
-    restaurantName: 'Bantu Delicacies & Lounge',
-    neighborhood: 'Jabi',
-    price: 7500,
-    signatureScore: 9.7,
-    dietary: ['pepper-soups', 'pescatarian'],
-    mealType: 'Dinner',
-    mood: 'casual-quick',
-    description: 'Charcoal roasted ripe plantain fingers paired with whole grilled spiced Tilapia fish, palm oil pepper dip, and roasted peanuts.',
-    chefNote: 'Fish marinated in ground scotch bonnet, ginger, garlic, and utazi herbs.',
-    image: '/images/boli_fish_1789406721483.png',
-    mapCoords: { x: 58, y: 48 },
-    recipe: {
-      prepTime: '20 mins', cookTime: '30 mins', difficulty: 'Intermediate', servings: '2 servings',
-      ingredients: ['2 Yellow Plantains', '1 Tilapia Fish', '1/3 cup Palm Oil', '4 Scotch Bonnets', 'Ginger & Garlic'],
-      instructions: [
-        'Marinate fish in spiced rub, roast on charcoal wire rack 25 mins.',
-        'Roast peeled plantains directly on grill wire until golden with blister spots.',
-        'Serve with spicy palm oil onion dipping sauce.'
-      ],
-      proTip: 'Semi-ripe yellow plantains give the ideal sweetness and firm grill texture.'
-    }
-  },
-
-  // 9. NKWOBI IN WOODEN MORTAR
-  {
-    id: 'dish-ng-9',
-    cityId: 'abuja',
-    category: 'pepper-soups',
-    name: 'Nkwobi (Spicy Cow Foot Delicacy in Wooden Mortar Bowl)',
-    restaurantId: 'rest-ng-8',
-    restaurantName: 'Jovinik Bukka',
-    neighborhood: 'Wuse II',
-    price: 8000,
-    signatureScore: 9.6,
-    dietary: ['pepper-soups', 'halal'],
-    mealType: 'Late-Night',
-    mood: 'group-feast',
-    description: 'Tender cow foot cooked in thick golden potash-emulsified palm oil sauce, garnished with Utazi leaf chiffonade and raw onion rings.',
-    chefNote: 'Palm oil emulsified with Akanwu (potash liquid) into rich golden cream.',
-    image: '/images/nkwobi_mortar_1789406779375.png',
-    mapCoords: { x: 45, y: 22 },
-    recipe: {
-      prepTime: '15 mins', cookTime: '60 mins', difficulty: 'Intermediate', servings: '4 servings',
-      ingredients: ['1 kg Cow Foot', '1/2 cup Palm Oil', '1 tsp Potash Liquid (Akanwu)', '2 tbsp Ground Ehuru', 'Utazi Leaves & Red Onion'],
-      instructions: [
-        'Pressure cook cow foot until tender.', 'Stir clear potash liquid into palm oil until yellow cream paste forms.',
-        'Mix in ehuru nutmeg, pepper, crayfish, and tender cow foot.', 'Serve in carved wooden mortar bowl with utazi.'
-      ],
-      proTip: 'Flame-roasting Ehuru nutmeg before grinding unleashes its full aromatic oil.'
-    }
-  },
-
-  // 10. SPICY BEEF SUYA
-  {
-    id: 'dish-ng-10',
-    cityId: 'lagos',
-    category: 'pepper-soups',
-    name: 'Spicy Beef Suya with Yaji Pepper & Sliced Onions',
-    restaurantId: 'rest-ng-3',
-    restaurantName: 'University of Suya',
-    neighborhood: 'Ikeja',
-    price: 4500,
-    signatureScore: 9.7,
-    dietary: ['pepper-soups', 'halal'],
-    mealType: 'Late-Night',
-    mood: 'late-night',
-    description: 'Thinly sliced tender beef skewered over open charcoal grill, heavily coated in authentic Northern Yaji spice (kuli-kuli, ginger, chili, garlic).',
-    chefNote: 'Grilled over hardwood embers for crisp caramelized spice crust.',
-    image: '/images/beef_suya_1789406566456.png',
-    mapCoords: { x: 30, y: 25 },
-    recipe: {
-      prepTime: '20 mins', cookTime: '15 mins', difficulty: 'Easy', servings: '4 servings',
-      ingredients: ['700g Beef Tenderloin (thin strips)', '1 cup Yaji Spice Blend (Kuli-kuli, ginger, chili)', 'Peanut Oil', 'Red Onions'],
-      instructions: [
-        'Thread beef strips onto wooden skewers.', 'Coat with oil and press heavily into Yaji spice blend.',
-        'Grill over high heat 6-8 mins per side.', 'Serve in foil with sliced onions and extra Yaji powder.'
-      ],
-      proTip: 'Slice beef against the grain while semi-frozen for paper-thin tender strips.'
-    }
-  },
-
-  // 11. PEPPERED SNAIL
-  {
-    id: 'dish-ng-11',
-    cityId: 'lagos',
-    category: 'pepper-soups',
-    name: 'Spicy Peppered Snails (Giant African Land Snail)',
-    restaurantId: 'rest-ng-1',
-    restaurantName: 'Terra Kulture Restaurant',
-    neighborhood: 'Victoria Island',
-    price: 11000,
-    signatureScore: 9.8,
-    dietary: ['pepper-soups', 'halal'],
-    mealType: 'Late-Night',
-    mood: 'date-night',
-    description: 'Crunchy jumbo African land snails sauteed in fiery coarse red rodo-tatashe pepper sauce, onions, and aromatic herbs.',
-    chefNote: 'Washed thoroughly with alum and lemon juice to remove all slime.',
-    image: '/images/peppered_snail_1789425119819.png',
-    mapCoords: { x: 42, y: 58 },
-    recipe: {
-      prepTime: '30 mins', cookTime: '25 mins', difficulty: 'Intermediate', servings: '3 servings',
-      ingredients: ['6 Jumbo Giant Snails', '5 Scotch Bonnets', '4 Red Bell Peppers', '1 cup Vegetable Oil', '1 Red Onion'],
-      instructions: [
-        'Clean snails with lime/alum, boil with seasoning for 15 mins.',
-        'Coarsely blend peppers and onions.', 'Fry pepper sauce in oil for 15 mins.',
-        'Toss boiled snails into hot pepper sauce for 8 mins until coated and glossy.'
-      ],
-      proTip: 'Boiling snails with onions and garlic before stir-frying infuses savory depth.'
-    }
-  },
-
-  // 12. STEAMED MOI MOI
-  {
-    id: 'dish-ng-12',
-    cityId: 'lagos',
-    category: 'snacks-street',
-    name: 'Steamed Leaf Moi Moi (Bean Pudding with Boiled Egg & Fish)',
-    restaurantId: 'rest-ng-5',
-    restaurantName: 'Bukka Hut',
-    neighborhood: 'Lekki Phase 1',
-    price: 2500,
-    signatureScore: 9.6,
-    dietary: ['snacks-street', 'halal'],
-    mealType: 'Breakfast & Lunch',
-    mood: 'casual-quick',
-    description: 'Velvety steamed brown bean pudding seasoned with crayfish, peppers, and palm oil, wrapped inside Ewe Eran leaves with quartered hardboiled egg and mackerel flakes.',
-    chefNote: 'Wrapped in native green leaves for authentic earthen aroma.',
-    image: '/images/moi_moi_1789425190764.png',
-    mapCoords: { x: 72, y: 52 },
-    recipe: {
-      prepTime: '30 mins', cookTime: '45 mins', difficulty: 'Intermediate', servings: '4 servings',
-      ingredients: ['3 cups Peeled Brown Beans', '3 Red Bell Peppers', '1/2 cup Vegetable/Palm Oil', 'Crayfish', 'Hard-boiled Eggs', 'Smoked Fish'],
-      instructions: [
-        'Blend peeled beans with peppers and onions into smooth batter.',
-        'Whisk in oil, warm water, crayfish, and seasoning until fluffy.',
-        'Pour into washed green leaves or foil ramekins, add boiled egg slice and fish flakes.',
-        'Steam in covered pot over medium heat for 45 mins.'
-      ],
-      proTip: 'Whisking air into the bean batter before wrapping ensures a light soufflé-like texture.'
-    }
-  },
-
-  // 13. EWA AGANYIN & AGEGE BREAD
-  {
-    id: 'dish-ng-13',
-    cityId: 'lagos',
-    category: 'beans-yam',
-    name: 'Ewa Aganyin with Spicy Dark Pepper Sauce & Agege Bread',
-    restaurantId: 'rest-ng-5',
-    restaurantName: 'Bukka Hut',
-    neighborhood: 'Yaba',
-    price: 3500,
-    signatureScore: 9.5,
-    dietary: ['beans-yam', 'vegetarian'],
-    mealType: 'Breakfast & Lunch',
-    mood: 'casual-quick',
-    description: 'Soft mashed honey beans (Ewa Oloyin) smothered in iconic dark fried palm oil pepper sauce made with caramelized onions and dry chili peppers, served with warm Agege bread.',
-    chefNote: 'Onions caramelized in palm oil until deep mahogany brown for authentic Aganyin flavor.',
-    image: '/images/ewa_aganyin_bread_1789406842679.png',
-    mapCoords: { x: 48, y: 42 },
-    recipe: {
-      prepTime: '15 mins', cookTime: '55 mins', difficulty: 'Easy', servings: '4 servings',
-      ingredients: ['3 cups Honey Beans', '1.5 cups Palm Oil', '3 Red Onions', '1/2 cup Dried Chili Peppers', 'Agege Bread'],
-      instructions: [
-        'Pressure cook beans until ultra-soft and mash lightly.',
-        'Fry sliced onions in palm oil for 20 mins until dark brown.',
-        'Add coarse pepper paste and crayfish, fry low heat until oil turns dark brown.',
-        'Ladle over hot beans and serve with Agege bread.'
-      ],
-      proTip: 'Slow caramelizing onions until deep brown is the secret to authentic Aganyin taste.'
-    }
-  },
-
-  // 14. CATFISH PEPPER SOUP
-  {
-    id: 'dish-ng-14',
+    id: 'dish-16',
     cityId: 'lagos',
     category: 'pepper-soups',
     name: 'Catfish Pepper Soup (Point & Kill) with Fresh Scent Leaves',
-    restaurantId: 'rest-ng-3',
+    restaurantId: 'rest-3',
     restaurantName: 'University of Suya',
     neighborhood: 'Ikeja',
     price: 8500,
     signatureScore: 9.7,
     dietary: ['pepper-soups', 'pescatarian'],
     mealType: 'Late-Night',
-    mood: 'late-night',
-    description: 'Steaming fresh catfish steaks cooked in traditional spicy herbal clear broth infused with Uda pods, Utazi, fresh scent leaves (Efirin), and yellow scotch bonnets.',
-    chefNote: 'Cooked fresh on order from live aquarium tanks.',
+    description: 'Steaming fresh catfish steaks cooked in traditional herbal clear broth infused with Uda pods, Utazi, scent leaves (Efirin), and yellow scotch bonnets.',
     image: '/images/catfish_peppersoup_1789406922178.png',
-    mapCoords: { x: 32, y: 28 },
-    recipe: {
-      prepTime: '15 mins', cookTime: '20 mins', difficulty: 'Easy', servings: '2 servings',
-      ingredients: ['1 Fresh Catfish', '2 tbsp Pepper Soup Spice', '3 Yellow Bonnets', 'Scent Leaves (Efirin)', 'Crayfish'],
-      instructions: [
-        'Place catfish steaks in pot with water, onions, spices, and peppers.',
-        'Boil medium heat 15 mins until fish turns opaque.',
-        'Toss in scent leaves, simmer 2 mins and serve hot.'
-      ],
-      proTip: 'Washing catfish with hot water or fresh lime removes all slipperiness.'
-    }
+    mapCoords: { x: 32, y: 28 }
+  },
+  {
+    id: 'dish-17',
+    cityId: 'abuja',
+    category: 'pepper-soups',
+    name: 'Goat Meat Pepper Soup (Spicy Ogunfe Broth)',
+    restaurantId: 'rest-7',
+    restaurantName: 'Bantu Delicacies & Lounge',
+    neighborhood: 'Jabi',
+    price: 7000,
+    signatureScore: 9.6,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Late-Night',
+    description: 'Tender goat meat chunks slow-simmered in aromatic pepper soup broth with calabash nutmeg, ginger, garlic, and wild herbs.',
+    image: '/images/catfish_peppersoup_1789406922178.png',
+    mapCoords: { x: 58, y: 48 }
+  },
+  {
+    id: 'dish-18',
+    cityId: 'lagos',
+    category: 'pepper-soups',
+    name: 'Spicy Chicken Pepper Soup',
+    restaurantId: 'rest-3',
+    restaurantName: 'University of Suya',
+    neighborhood: 'Ikeja',
+    price: 6500,
+    signatureScore: 9.5,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Late-Night',
+    description: 'Hard local chicken boiled in fiery herbal broth with fresh ginger, garlic, scent leaves, and scotch bonnet peppers.',
+    image: '/images/catfish_peppersoup_1789406922178.png',
+    mapCoords: { x: 30, y: 25 }
+  },
+  {
+    id: 'dish-19',
+    cityId: 'lagos',
+    category: 'pepper-soups',
+    name: 'Spicy Beef Suya with Yaji Pepper & Sliced Onions',
+    restaurantId: 'rest-3',
+    restaurantName: 'University of Suya',
+    neighborhood: 'Ikeja',
+    price: 4500,
+    signatureScore: 9.7,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Late-Night',
+    description: 'Thinly sliced tender beef skewered over charcoal grill, heavily coated in authentic Northern Yaji spice (kuli-kuli, ginger, chili, garlic).',
+    image: '/images/beef_suya_1789406566456.png',
+    mapCoords: { x: 30, y: 25 }
+  },
+  {
+    id: 'dish-20',
+    cityId: 'lagos',
+    category: 'pepper-soups',
+    name: 'Spicy Peppered Snails (Giant African Land Snail)',
+    restaurantId: 'rest-1',
+    restaurantName: 'Terra Kulture Restaurant',
+    neighborhood: 'Victoria Island',
+    price: 11000,
+    signatureScore: 9.8,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Late-Night',
+    description: 'Crunchy jumbo African land snails sauteed in fiery coarse red rodo-tatashe pepper sauce, onions, and aromatic herbs.',
+    image: '/images/peppered_snail_1789425119819.png',
+    mapCoords: { x: 42, y: 58 }
+  },
+  {
+    id: 'dish-21',
+    cityId: 'lagos',
+    category: 'pepper-soups',
+    name: 'Peppered Gizzard & Plantain (Gizdodo Combo)',
+    restaurantId: 'rest-5',
+    restaurantName: 'Bukka Hut',
+    neighborhood: 'Lekki Phase 1',
+    price: 5500,
+    signatureScore: 9.6,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Lunch & Dinner',
+    description: 'Fried sweet plantain cubes tossed with boiled chicken gizzards in rich bell pepper and onion sauce.',
+    image: '/images/jollof_rice_dodo_1789406504058.png',
+    mapCoords: { x: 72, y: 52 }
+  },
+  {
+    id: 'dish-22',
+    cityId: 'abuja',
+    category: 'pepper-soups',
+    name: 'Nkwobi (Spicy Cow Foot Delicacy in Wooden Mortar Bowl)',
+    restaurantId: 'rest-8',
+    restaurantName: 'Jovinik Bukka',
+    neighborhood: 'Wuse II',
+    price: 8000,
+    signatureScore: 9.6,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Late-Night',
+    description: 'Tender cow foot cooked in thick golden potash-emulsified palm oil sauce, garnished with Utazi leaf chiffonade and raw onion rings.',
+    image: '/images/nkwobi_mortar_1789406779375.png',
+    mapCoords: { x: 45, y: 22 }
+  },
+  {
+    id: 'dish-23',
+    cityId: 'abuja',
+    category: 'pepper-soups',
+    name: 'Isi Ewu (Spicy Goat Head Delicacy in Wooden Mortar)',
+    restaurantId: 'rest-8',
+    restaurantName: 'Jovinik Bukka',
+    neighborhood: 'Wuse II',
+    price: 9000,
+    signatureScore: 9.7,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Late-Night',
+    description: 'Traditional Igbo goat head delicacy cooked in rich yellow potash palm oil cream, ehuru nutmeg, utazi leaves, and raw onion rings.',
+    image: '/images/nkwobi_mortar_1789406779375.png',
+    mapCoords: { x: 45, y: 22 }
+  },
+  {
+    id: 'dish-24',
+    cityId: 'abuja',
+    category: 'pepper-soups',
+    name: 'Authentic Northern Kilishi (Spiced Beef Jerky)',
+    restaurantId: 'rest-3',
+    restaurantName: 'University of Suya',
+    neighborhood: 'Wuse II',
+    price: 5000,
+    signatureScore: 9.8,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Snack',
+    description: 'Sun-dried wafer-thin beef sheets coated in Yaji spice paste and roasted over charcoal embers.',
+    image: '/images/beef_suya_1789406566456.png',
+    mapCoords: { x: 45, y: 22 }
+  },
+
+  // --- BEANS & YAM DISHES ---
+  {
+    id: 'dish-25',
+    cityId: 'lagos',
+    category: 'beans-yam',
+    name: 'Ewa Aganyin with Spicy Dark Pepper Sauce & Agege Bread',
+    restaurantId: 'rest-5',
+    restaurantName: 'Bukka Hut',
+    neighborhood: 'Yaba',
+    price: 3500,
+    signatureScore: 9.5,
+    dietary: ['beans-yam', 'vegetarian'],
+    mealType: 'Breakfast & Lunch',
+    description: 'Soft mashed honey beans (Ewa Oloyin) smothered in dark fried palm oil pepper sauce with caramelized onions, served with Agege bread.',
+    image: '/images/ewa_aganyin_bread_1789406842679.png',
+    mapCoords: { x: 48, y: 42 }
+  },
+  {
+    id: 'dish-26',
+    cityId: 'lagos',
+    category: 'beans-yam',
+    name: 'Beans and Plantain (Ewa Oloyin & Dodo)',
+    restaurantId: 'rest-5',
+    restaurantName: 'Bukka Hut',
+    neighborhood: 'Surulere',
+    price: 3000,
+    signatureScore: 9.4,
+    dietary: ['beans-yam', 'vegetarian'],
+    mealType: 'Lunch',
+    description: 'Sweet honey beans stewed with palm oil, onions, and dry crayfish, served alongside golden fried sweet plantains.',
+    image: '/images/ewa_aganyin_bread_1789406842679.png',
+    mapCoords: { x: 38, y: 68 }
+  },
+  {
+    id: 'dish-27',
+    cityId: 'ibadan',
+    category: 'beans-yam',
+    name: 'Nigerian Yam Porridge (Asaro) with Smoked Fish & Ugu',
+    restaurantId: 'rest-4',
+    restaurantName: 'Amala Shitta',
+    neighborhood: 'Bodija',
+    price: 4500,
+    signatureScore: 9.6,
+    dietary: ['beans-yam'],
+    mealType: 'Lunch',
+    description: 'Pona white yam cooked into rich orange palm oil mash with tomato pepper reduction, crayfish, smoked mackerel, and fresh ugu leaves.',
+    image: '/images/egusi_pounded_yam_1789406535718.png',
+    mapCoords: { x: 40, y: 40 }
+  },
+  {
+    id: 'dish-28',
+    cityId: 'lagos',
+    category: 'beans-yam',
+    name: 'Boli (Roasted Plantain) & Charcoal Roasted Tilapia Fish',
+    restaurantId: 'rest-7',
+    restaurantName: 'Bantu Delicacies & Lounge',
+    neighborhood: 'Lekki Phase 1',
+    price: 7500,
+    signatureScore: 9.7,
+    dietary: ['beans-yam', 'pescatarian'],
+    mealType: 'Dinner',
+    description: 'Charcoal roasted ripe plantain fingers paired with whole grilled spiced Tilapia fish, palm oil pepper dip, and roasted peanuts.',
+    image: '/images/boli_fish_1789406721483.png',
+    mapCoords: { x: 72, y: 52 }
+  },
+  {
+    id: 'dish-29',
+    cityId: 'lagos',
+    category: 'beans-yam',
+    name: 'Fried Yam Chips with Spicy Scrambled Egg & Vegetable Sauce',
+    restaurantId: 'rest-5',
+    restaurantName: 'Bukka Hut',
+    neighborhood: 'Yaba',
+    price: 3500,
+    signatureScore: 9.3,
+    dietary: ['beans-yam', 'vegetarian'],
+    mealType: 'Breakfast',
+    description: 'Crispy deep-fried white yam sticks served with hot fried tomato, egg, onion, and fresh pepper sauce.',
+    image: '/images/boli_fish_1789406721483.png',
+    mapCoords: { x: 48, y: 42 }
+  },
+
+  // --- SNACKS & STREET FOOD ---
+  {
+    id: 'dish-30',
+    cityId: 'lagos',
+    category: 'snacks-street',
+    name: 'Steamed Leaf Moi Moi (Bean Pudding with Egg & Fish)',
+    restaurantId: 'rest-5',
+    restaurantName: 'Bukka Hut',
+    neighborhood: 'Lekki Phase 1',
+    price: 2500,
+    signatureScore: 9.6,
+    dietary: ['snacks-street', 'halal'],
+    mealType: 'Breakfast & Lunch',
+    description: 'Velvety steamed brown bean pudding seasoned with crayfish, peppers, and palm oil, wrapped inside Ewe Eran leaves with egg and fish flakes.',
+    image: '/images/moi_moi_1789425190764.png',
+    mapCoords: { x: 72, y: 52 }
+  },
+  {
+    id: 'dish-31',
+    cityId: 'lagos',
+    category: 'snacks-street',
+    name: 'Golden Crisp Akara (Bean Cakes) with Hot Pap (Ogi / Custard)',
+    restaurantId: 'rest-4',
+    restaurantName: 'Amala Shitta',
+    neighborhood: 'Surulere',
+    price: 1800,
+    signatureScore: 9.5,
+    dietary: ['snacks-street', 'vegetarian'],
+    mealType: 'Breakfast',
+    description: 'Light and airy deep-fried bean fritters made with ground peeled beans, onions, and scotch bonnet peppers, served with hot smooth Ogi.',
+    image: '/images/moi_moi_1789425190764.png',
+    mapCoords: { x: 38, y: 68 }
+  },
+  {
+    id: 'dish-32',
+    cityId: 'lagos',
+    category: 'snacks-street',
+    name: 'Fresh Golden Puff-Puff (Street Snack)',
+    restaurantId: 'rest-5',
+    restaurantName: 'Bukka Hut',
+    neighborhood: 'Yaba',
+    price: 1500,
+    signatureScore: 9.4,
+    dietary: ['snacks-street', 'vegetarian'],
+    mealType: 'Snack',
+    description: 'Sweet, chewy golden deep-fried yeast dough balls infused with a hint of nutmeg and vanilla.',
+    image: '/images/moi_moi_1789425190764.png',
+    mapCoords: { x: 48, y: 42 }
+  },
+  {
+    id: 'dish-33',
+    cityId: 'lagos',
+    category: 'snacks-street',
+    name: 'Crunchy Nigerian Chin Chin',
+    restaurantId: 'rest-1',
+    restaurantName: 'Terra Kulture Restaurant',
+    neighborhood: 'Victoria Island',
+    price: 2000,
+    signatureScore: 9.3,
+    dietary: ['snacks-street', 'vegetarian'],
+    mealType: 'Snack',
+    description: 'Crispy, sweet, crunchy fried pastry cubes made with butter, milk, flour, and nutmeg.',
+    image: '/images/moi_moi_1789425190764.png',
+    mapCoords: { x: 42, y: 58 }
+  },
+
+  // --- TRADITIONAL DRINKS ---
+  {
+    id: 'dish-34',
+    cityId: 'lagos',
+    category: 'drinks-beverages',
+    name: 'Chilled Zobo Drink (Hibiscus, Ginger & Pineapple Tea)',
+    restaurantId: 'rest-1',
+    restaurantName: 'Terra Kulture Restaurant',
+    neighborhood: 'Victoria Island',
+    price: 1500,
+    signatureScore: 9.7,
+    dietary: ['drinks-beverages', 'vegan'],
+    mealType: 'Drink',
+    description: 'Refreshing cold-brewed Roselle hibiscus tea infused with fresh ginger, cloves, cinnamon, and natural sweet pineapple juice.',
+    image: '/images/catfish_peppersoup_1789406922178.png',
+    mapCoords: { x: 42, y: 58 }
+  },
+  {
+    id: 'dish-35',
+    cityId: 'abuja',
+    category: 'drinks-beverages',
+    name: 'Chilled Kunu Zaki (Northern Millet & Tigernut Refreshment)',
+    restaurantId: 'rest-8',
+    restaurantName: 'Jovinik Bukka',
+    neighborhood: 'Wuse II',
+    price: 1500,
+    signatureScore: 9.6,
+    dietary: ['drinks-beverages', 'vegan'],
+    mealType: 'Drink',
+    description: 'Creamy traditional Northern Nigerian beverage made from sprouted millet, tigernuts, sweet potato, ginger, and cloves.',
+    image: '/images/catfish_peppersoup_1789406922178.png',
+    mapCoords: { x: 45, y: 22 }
+  },
+  {
+    id: 'dish-36',
+    cityId: 'lagos',
+    category: 'drinks-beverages',
+    name: 'Fresh Unadulterated Palm Wine (Emu)',
+    restaurantId: 'rest-4',
+    restaurantName: 'Amala Shitta',
+    neighborhood: 'Surulere',
+    price: 2500,
+    signatureScore: 9.8,
+    dietary: ['drinks-beverages'],
+    mealType: 'Drink',
+    description: 'Freshly tapped sweet, naturally effervescent white palm tree nectar served in traditional calabash cup.',
+    image: '/images/catfish_peppersoup_1789406922178.png',
+    mapCoords: { x: 38, y: 68 }
   }
 ];
 
 export const MOCK_RESTAURANTS = [
   {
-    id: 'rest-ng-1',
+    id: 'rest-1',
     cityId: 'lagos',
     name: 'Terra Kulture Restaurant',
     cuisine: 'Authentic Nigerian Fine Dining',
@@ -487,7 +654,7 @@ export const MOCK_RESTAURANTS = [
     }
   },
   {
-    id: 'rest-ng-2',
+    id: 'rest-2',
     cityId: 'lagos',
     name: 'Yellow Chilli',
     cuisine: 'Modern Pan-Nigerian Cuisine',
@@ -507,7 +674,7 @@ export const MOCK_RESTAURANTS = [
     }
   },
   {
-    id: 'rest-ng-3',
+    id: 'rest-3',
     cityId: 'lagos',
     name: 'University of Suya',
     cuisine: 'Northern Suya Spot & Grill',
@@ -527,7 +694,7 @@ export const MOCK_RESTAURANTS = [
     }
   },
   {
-    id: 'rest-ng-4',
+    id: 'rest-4',
     cityId: 'lagos',
     name: 'Amala Shitta',
     cuisine: 'Heritage Amala Joint',
@@ -547,7 +714,7 @@ export const MOCK_RESTAURANTS = [
     }
   },
   {
-    id: 'rest-ng-5',
+    id: 'rest-5',
     cityId: 'lagos',
     name: 'Bukka Hut',
     cuisine: 'Contemporary Nigerian Buka',
@@ -567,7 +734,7 @@ export const MOCK_RESTAURANTS = [
     }
   },
   {
-    id: 'rest-ng-6',
+    id: 'rest-6',
     cityId: 'abuja',
     name: 'Nkoyo Restaurant',
     cuisine: 'Fine Nigerian & Seafood',
@@ -590,33 +757,33 @@ export const MOCK_RESTAURANTS = [
 
 export const EDITORIAL_GUIDES = [
   {
-    id: 'guide-ng-1',
+    id: 'guide-1',
     cityId: 'lagos',
     title: 'The Legendary Amala & Buka Spots of Lagos',
     subtitle: 'From Surulere Shitta to Victoria Island: where to find silky dark Amala, piping hot Ewedu, and tender Ogunfe goat meat.',
     curator: 'Tunde Bakare, Lagos Food Critic',
     dishCount: 6, readTime: '4 min read',
     coverImage: '/images/amala_ewedu_1789406591510.png',
-    featuredDishIds: ['dish-ng-5', 'dish-ng-6']
+    featuredDishIds: ['dish-10', 'dish-11']
   },
   {
-    id: 'guide-ng-2',
+    id: 'guide-2',
     cityId: 'lagos',
     title: 'Mastering the Art of Smokey Party Jollof Rice',
     subtitle: 'Secrets of firewood smoke, tatashe pepper reduction, and perfect parboiled long-grain rice.',
     curator: 'Chef Yemisi Lawson',
     dishCount: 4, readTime: '5 min read',
     coverImage: '/images/jollof_rice_dodo_1789406504058.png',
-    featuredDishIds: ['dish-ng-1', 'dish-ng-2', 'dish-ng-10']
+    featuredDishIds: ['dish-1', 'dish-2', 'dish-19']
   },
   {
-    id: 'guide-ng-3',
+    id: 'guide-3',
     cityId: 'abuja',
     title: 'Abuja Seafood & Niger-Delta Delicacies Guide',
     subtitle: 'Fresh live catfish fisherman soups, pounded yam egusi, and charcoal roasted Boli fish spots in Maitama & Jabi.',
     curator: 'Amina Bello, Abuja Taste Journal',
     dishCount: 5, readTime: '4 min read',
     coverImage: '/images/fisherman_soup_1789406664662.png',
-    featuredDishIds: ['dish-ng-7', 'dish-ng-8', 'dish-ng-9']
+    featuredDishIds: ['dish-7', 'dish-8', 'dish-9']
   }
 ];
