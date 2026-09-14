@@ -20,8 +20,7 @@ export default function Header({
         <div className="brand-section">
           <div className="brand-logo">
             <Compass size={24} style={{ color: 'var(--color-accent)' }} />
-            <span>CULINARIA</span>
-            <span className="brand-badge">Naija</span>
+            <span>FoodFindrr</span>
           </div>
 
           <div className="city-selector">

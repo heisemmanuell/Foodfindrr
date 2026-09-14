@@ -31,7 +31,7 @@ export default function FoodDeciderModal({ activeCity, onClose, onSelectDish }) 
         </div>
 
         <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
-          Can't decide what to eat in {activeCity.toUpperCase()}? Select your current craving vibe and let Culinaria pick your next meal.
+          Can't decide what to eat in {activeCity.toUpperCase()}? Select your current craving vibe and let FoodFindrr pick your next meal.
         </p>
 
         {/* Mood Selection */}
@@ -76,7 +76,7 @@ export default function FoodDeciderModal({ activeCity, onClose, onSelectDish }) 
               {pickedDish.name}
             </h4>
             <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
-              at <strong>{pickedDish.restaurantName}</strong> ({pickedDish.neighborhood}) • ${pickedDish.price}
+              at <strong>{pickedDish.restaurantName}</strong> ({pickedDish.neighborhood}) • ₦{pickedDish.price.toLocaleString()}
             </div>
             <p style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', lineHeight: 1.4, marginBottom: '0.75rem' }}>
               "{pickedDish.description}"

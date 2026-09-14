@@ -29,13 +29,13 @@ export default function NotebookView({ savedItems, onToggleSave, onSelectItem })
       )
       .join('\n');
 
-    const blob = new Blob([`CULINARIA FOOD ITINERARY\n========================\n\n${textContent}`], {
+    const blob = new Blob([`FOODFINDRR FOOD ITINERARY\n========================\n\n${textContent}`], {
       type: 'text/plain;charset=utf-8'
     });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `culinaria-food-itinerary.txt`;
+    link.download = `foodfindrr-food-itinerary.txt`;
     link.click();
   };
 
@@ -111,7 +111,7 @@ export default function NotebookView({ savedItems, onToggleSave, onSelectItem })
                   <span>{type === 'dish' ? detail.restaurantName : detail.cuisine}</span>
                   <span>•</span>
                   <span style={{ fontWeight: 700, color: 'var(--color-accent)' }}>
-                    {type === 'dish' ? `$${detail.price}` : detail.priceRange}
+                    {type === 'dish' ? (detail.price ? `₦${detail.price.toLocaleString()}` : '') : detail.priceRange}
                   </span>
                 </div>
               </div>
