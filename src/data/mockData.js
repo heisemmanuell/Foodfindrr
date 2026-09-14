@@ -1,4 +1,4 @@
-// Culinaria Nigerian Food, Restaurant & Recipe Dataset
+// FoodFindrr - Comprehensive Authentic Nigerian Food, Restaurant & Recipe Dataset
 
 export const CITIES = [
   { id: 'lagos', name: 'Lagos', country: 'Nigeria', code: 'LOS', symbol: '₦' },
@@ -15,20 +15,12 @@ export const NEIGHBORHOODS = {
 };
 
 export const DIETARY_OPTIONS = [
-  { id: 'all', label: 'All Diets' },
-  { id: 'halal', label: 'Halal Certified' },
-  { id: 'pescatarian', label: 'Pescatarian' },
-  { id: 'vegetarian', label: 'Vegetarian Friendly' },
-  { id: 'gluten-free', label: 'Gluten-Free' }
-];
-
-export const MOOD_OPTIONS = [
-  { id: 'all', label: 'Any Vibe' },
-  { id: 'buka-spot', label: 'Local Bukka' },
-  { id: 'date-night', label: 'Fine Dining / Date Night' },
-  { id: 'casual-quick', label: 'Quick Bite' },
-  { id: 'group-feast', label: 'Family Feast' },
-  { id: 'late-night', label: 'Late Night Suya' }
+  { id: 'all', label: 'All Categories' },
+  { id: 'rice-grains', label: 'Rice & Grains' },
+  { id: 'swallow-soups', label: 'Swallow & Soups' },
+  { id: 'pepper-soups', label: 'Pepper Soups & Grills' },
+  { id: 'snacks-street', label: 'Snacks & Street Food' },
+  { id: 'drinks-beverages', label: 'Drinks & Beverages' }
 ];
 
 export const MOCK_DISHES = [
@@ -36,146 +28,147 @@ export const MOCK_DISHES = [
   {
     id: 'dish-ng-1',
     cityId: 'lagos',
+    category: 'rice-grains',
     name: 'Smokey Party Jollof Rice with Fried Plantain & Goat Meat',
     restaurantId: 'rest-ng-1',
     restaurantName: 'Terra Kulture Restaurant',
     neighborhood: 'Victoria Island',
     price: 7500,
     signatureScore: 9.9,
-    dietary: ['halal'],
+    dietary: ['rice-grains', 'halal'],
     mealType: 'Lunch & Dinner',
     mood: 'date-night',
-    description: 'Aromatic long-grain parboiled rice cooked in rich rodo-tatashe pepper blend, wood-smoke seasoned, served with golden dodo and tender fried goat meat.',
+    description: 'Aromatic long-grain parboiled rice cooked in rich rodo-tatashe pepper reduction, wood-smoke seasoned, served with golden dodo and tender fried goat meat.',
     chefNote: 'Infused with natural firewood smoke aroma using authentic cast-iron pots.',
     image: '/images/jollof_rice_dodo_1789406504058.png',
     mapCoords: { x: 42, y: 58 },
     recipe: {
-      prepTime: '25 mins',
-      cookTime: '45 mins',
-      difficulty: 'Intermediate',
-      servings: '6 servings',
+      prepTime: '25 mins', cookTime: '45 mins', difficulty: 'Intermediate', servings: '6 servings',
       ingredients: [
-        '4 cups Long Grain Parboiled Rice',
-        '8 Red Bell Peppers (Tatashe)',
-        '5 Scotch Bonnet Peppers (Rodo)',
-        '2 large Red Onions (sliced)',
-        '1 cup Quality Red Palm Oil or Vegetable Oil',
-        '3 tbsp Tomato Paste',
-        '2 cups Rich Beef / Goat Meat Stock',
-        '1 tbsp Thyme & Curry Powder',
-        '3 Bay Leaves & Seasoning Cubes',
-        '1 kg Soft Goat Meat (boiled and lightly fried)',
-        '3 Ripe Yellow Plantains (sliced for Dodo)'
+        '4 cups Long Grain Parboiled Rice', '8 Red Bell Peppers (Tatashe)', '5 Scotch Bonnet Peppers (Rodo)',
+        '2 large Red Onions', '1 cup Palm Oil / Vegetable Oil', '3 tbsp Tomato Paste', '2 cups Beef/Goat Meat Stock',
+        '1 tbsp Thyme & Curry', '3 Bay Leaves & Seasoning', '1 kg Soft Goat Meat', '3 Ripe Plantains'
       ],
       instructions: [
-        'Blend the red bell peppers, scotch bonnets, fresh tomatoes, and one onion until smooth. Boil off excess water in a pot until thick.',
-        'Heat oil in a heavy-bottomed pot. Fry sliced onions and tomato paste for 5 minutes until fragrance deepens.',
-        'Pour in the boiled pepper blend and fry for 15 minutes until oil separates to the top.',
-        'Add meat stock, bay leaves, thyme, curry, and seasoning cubes. Bring to a rolling boil.',
-        'Wash parboiled rice thoroughly and add to the simmering sauce. Stir once, cover with foil paper and tight lid.',
-        'Cook on low heat for 30 minutes. Once soft, turn heat to high for 5 minutes to trap that signature party smokey aroma!'
+        'Blend peppers and onions, boil off excess water.', 'Fry sliced onions and tomato paste in oil for 5 mins.',
+        'Add blended pepper reduction and fry for 15 mins until oil rises.', 'Pour in rich goat broth, thyme, curry, and bay leaves.',
+        'Add washed rice, cover with foil and seal pot lid.', 'Cook low heat 30 mins, then turn heat high 5 mins to trap firewood smoke aroma.'
       ],
-      proTip: 'Never stir Jollof rice repeatedly while cooking; let the steam cook the grains evenly under sealed foil.'
+      proTip: 'Sealing the pot with foil paper traps steam and guarantees perfect non-soggy party Jollof rice.'
     }
   },
 
-  // 2. POUNDED YAM & EGUSI SOUP
+  // 2. NIGERIAN FRIED RICE
   {
     id: 'dish-ng-2',
     cityId: 'lagos',
+    category: 'rice-grains',
+    name: 'Special Nigerian Fried Rice with Fried Chicken & Dodo',
+    restaurantId: 'rest-ng-2',
+    restaurantName: 'Yellow Chilli',
+    neighborhood: 'Ikoyi',
+    price: 8000,
+    signatureScore: 9.8,
+    dietary: ['rice-grains', 'halal'],
+    mealType: 'Lunch',
+    mood: 'date-night',
+    description: 'Savory turmeric rice stir-fried with diced carrots, sweet peas, liver chunks, sweet corn, and green peppers, paired with crispy seasoned chicken leg.',
+    chefNote: 'Stir-fried in small batches on high heat wok for crisp fresh vegetable bite.',
+    image: '/images/fried_rice_1789414447905.png',
+    mapCoords: { x: 55, y: 48 },
+    recipe: {
+      prepTime: '20 mins', cookTime: '30 mins', difficulty: 'Intermediate', servings: '4 servings',
+      ingredients: [
+        '3 cups Long Grain Parboiled Rice', '2 cups Rich Chicken Stock', '1 tbsp Curry Powder & Turmeric',
+        '1 cup Diced Carrots & Sweet Peas', '1/2 cup Sweet Corn', '200g Boiled Liver (diced)', '4 Seasoned Chicken Legs'
+      ],
+      instructions: [
+        'Parboil rice in rich seasoned chicken stock with curry and turmeric until 80% soft.',
+        'Heat vegetable oil in wok or wide pan.', 'Stir fry liver and chopped vegetables for 3 mins.',
+        'Add cooked rice in small batches, tossing continuously for 5 mins until fragrant.', 'Serve hot with deep-fried golden chicken leg and dodo.'
+      ],
+      proTip: 'Cool boiled rice completely before stir-frying to prevent grains from sticking together.'
+    }
+  },
+
+  // 3. POUNDED YAM & EGUSI SOUP
+  {
+    id: 'dish-ng-3',
+    cityId: 'lagos',
+    category: 'swallow-soups',
     name: 'Pounded Yam with Authentic Egusi Soup & Stockfish',
     restaurantId: 'rest-ng-2',
     restaurantName: 'Yellow Chilli',
     neighborhood: 'Ikoyi',
     price: 9500,
     signatureScore: 9.8,
-    dietary: ['halal', 'gluten-free'],
+    dietary: ['swallow-soups', 'halal'],
     mealType: 'Dinner',
     mood: 'group-feast',
     description: 'Silky smooth hand-pounded white yam paired with rich melon seed soup braised with dried stockfish head, bitter leaf, crayfish, and assorted meats.',
     chefNote: 'Ground melon seeds pan-roasted before simmer for deep nutty richness.',
     image: '/images/egusi_pounded_yam_1789406535718.png',
-    mapCoords: { x: 55, y: 48 },
+    mapCoords: { x: 50, y: 50 },
     recipe: {
-      prepTime: '30 mins',
-      cookTime: '50 mins',
-      difficulty: 'Master Chef',
-      servings: '4 servings',
+      prepTime: '30 mins', cookTime: '50 mins', difficulty: 'Master Chef', servings: '4 servings',
       ingredients: [
-        '3 cups Ground Melon Seeds (Egusi)',
-        '1 medium Tuber White Pona Yam',
-        '1 cup Bleached Palm Oil',
-        '2 cups Ground Crayfish',
-        '1 Deboned Stockfish Head (Okporoko)',
-        '1 large Dried Catfish (washed in hot salt water)',
-        'Fresh Ugu leaves or Bitterleaf (finely chopped)',
-        '2 tbsp Locust Beans (Iru)',
-        '1 kg Assorted Meat (Shaki, Kpomo, Beef)'
+        '3 cups Ground Melon Seeds (Egusi)', '1 medium Tuber White Yam', '1 cup Bleached Palm Oil',
+        '2 cups Ground Crayfish', '1 Stockfish Head', 'Fresh Ugu leaves', '2 tbsp Locust Beans (Iru)'
       ],
       instructions: [
-        'Boil assorted meat and stockfish with onions and seasoning until tender. Reserve rich broth.',
-        'Mix ground Egusi with a little warm water and chopped onions to form thick paste balls.',
-        'Heat palm oil in pot, add iru (locust beans). Drop egusi paste balls into hot oil and fry gently without stirring for 8 mins.',
-        'Add meat stock, crayfish, and peppers. Simmer for 20 mins until egusi thickens and oils rise.',
-        'Stir in dried fish and chopped ugu leaves. Simmer for 5 minutes.',
-        'Peel and boil yam chunks until soft. Pound in mortar or food processor until stretchy and smooth.'
+        'Boil assorted meats and stockfish until tender.', 'Mix ground egusi with warm water to form paste balls.',
+        'Fry egusi paste balls in hot palm oil with iru for 8 mins undisturbed.', 'Add broth, crayfish, and peppers; simmer 20 mins.',
+        'Stir in fresh ugu leaves.', 'Pound boiled yam until smooth and stretchy.'
       ],
-      proTip: 'Frying the egusi paste balls undisturbed creates delicious chunky morsels in the soup.'
+      proTip: 'Frying egusi paste undisturbed creates delicious chunky morsels in the soup.'
     }
   },
 
-  // 3. SPICY BEEF SUYA
-  {
-    id: 'dish-ng-3',
-    cityId: 'lagos',
-    name: 'Spicy Beef Suya with Yaji Pepper & Sliced Onions',
-    restaurantId: 'rest-ng-3',
-    restaurantName: 'University of Suya',
-    neighborhood: 'Ikeja',
-    price: 4500,
-    signatureScore: 9.7,
-    dietary: ['halal', 'gluten-free'],
-    mealType: 'Late-Night',
-    mood: 'late-night',
-    description: 'Thinly sliced tender beef skewered over open charcoal grill, heavily coated in authentic Northern Yaji spice (kuli-kuli, ginger, chili, garlic).',
-    chefNote: 'Grilled over embers made from hardwood timber for crisp caramelized edges.',
-    image: '/images/beef_suya_1789406566456.png',
-    mapCoords: { x: 30, y: 25 },
-    recipe: {
-      prepTime: '20 mins',
-      cookTime: '15 mins',
-      difficulty: 'Easy',
-      servings: '4 servings',
-      ingredients: [
-        '700g Flank Steak or Beef Tenderloin (sliced paper thin)',
-        '1 cup Yaji Spice Blend (Ground Kuli-Kuli peanut cake, ginger, cayenne, garlic powder, onion powder, salt)',
-        '3 tbsp Peanut Oil or Vegetable Oil',
-        '1 Red Onion (sliced into rings)',
-        '2 Fresh Tomatoes (sliced)',
-        'Wooden Skewers (soaked in water for 30 mins)'
-      ],
-      instructions: [
-        'Thread paper-thin beef strips tightly onto soaked wooden skewers.',
-        'Generously coat skewers with peanut oil, then press heavily into the dry Yaji spice blend until fully covered.',
-        'Preheat charcoal grill or oven broiler to high (220°C / 425°F).',
-        'Grill skewers for 6-8 minutes per side, brushing lightly with oil and flipping until edges turn crisp and fragrant.',
-        'Serve hot wrapped in old-school newspaper lined foil with fresh onion rings, tomatoes, and extra extra Yaji powder!'
-      ],
-      proTip: 'Always slice meat against the grain when semi-frozen for razor thin suya strips.'
-    }
-  },
-
-  // 4. AMALA, EWEDU & GBEGIRI
+  // 4. EFO RIRO & POUNDED YAM
   {
     id: 'dish-ng-4',
     cityId: 'lagos',
+    category: 'swallow-soups',
+    name: 'Efo Riro (Yoruba Spinach Stew) with Assorted Meats',
+    restaurantId: 'rest-ng-4',
+    restaurantName: 'Amala Shitta',
+    neighborhood: 'Surulere',
+    price: 7000,
+    signatureScore: 9.7,
+    dietary: ['swallow-soups', 'halal'],
+    mealType: 'Lunch & Dinner',
+    mood: 'buka-spot',
+    description: 'Vibrant Nigerian spinach stew cooked in palm oil, locust beans (iru), smoked shawa fish, dried crayfish, ponmo, and tender beef chunks.',
+    chefNote: 'Blanched spinach squeezed dry before adding to stew to preserve crisp texture.',
+    image: '/images/efo_riro_1789414560759.png',
+    mapCoords: { x: 38, y: 68 },
+    recipe: {
+      prepTime: '20 mins', cookTime: '35 mins', difficulty: 'Intermediate', servings: '4 servings',
+      ingredients: [
+        '2 bunches Fresh Spinach / Shoko / Tete', '1 cup Palm Oil', '2 tbsp Locust Beans (Iru)',
+        '6 Coarsely Blended Tatashe & Rodo Peppers', '2 cups Ground Crayfish', 'Assorted Meat & Ponmo'
+      ],
+      instructions: [
+        'Blanch spinach in hot water for 2 mins, shock in cold water and squeeze dry.',
+        'Fry sliced onions and iru in palm oil for 5 mins.', 'Add pepper reduction and fry 15 mins until oil floats.',
+        'Stir in meats, stockfish, crayfish, then fold in spinach for final 3 minutes.'
+      ],
+      proTip: 'Never overcook Efo Riro after adding vegetables to keep green color and vitamins intact.'
+    }
+  },
+
+  // 5. AMALA, EWEDU & GBEGIRI
+  {
+    id: 'dish-ng-5',
+    cityId: 'lagos',
+    category: 'swallow-soups',
     name: 'Amala, Ewedu & Gbegiri (Lapo-Lapo Combo with Goat Meat)',
     restaurantId: 'rest-ng-4',
     restaurantName: 'Amala Shitta',
     neighborhood: 'Surulere',
     price: 5000,
     signatureScore: 9.8,
-    dietary: ['halal'],
+    dietary: ['swallow-soups', 'halal'],
     mealType: 'Lunch',
     mood: 'buka-spot',
     description: 'Fluffy dark yam flour (Amala isu), vibrant slimy Ewedu jute leaf, silky yellow Gbegiri bean soup, and hot spicy buka stew with soft goat meat.',
@@ -183,40 +176,31 @@ export const MOCK_DISHES = [
     image: '/images/amala_ewedu_1789406591510.png',
     mapCoords: { x: 38, y: 68 },
     recipe: {
-      prepTime: '25 mins',
-      cookTime: '40 mins',
-      difficulty: 'Intermediate',
-      servings: '4 servings',
+      prepTime: '25 mins', cookTime: '40 mins', difficulty: 'Intermediate', servings: '4 servings',
       ingredients: [
-        '2 cups Quality Dark Yam Flour (Elubo Amala)',
-        '2 cups Peeled Brown Beans (for Gbegiri yellow bean soup)',
-        '2 cups Fresh Jute Leaves (Ewedu)',
-        '1 tbsp Kaun (Potash or Baking soda pinch)',
-        '1 cup Palm Oil',
-        '2 tbsp Ground Crayfish & Iru (Locust Beans)',
-        'Fried Goat Meat & Buka Pepper Stew'
+        '2 cups Dark Yam Flour (Elubo Amala)', '2 cups Peeled Brown Beans (for Gbegiri)', '2 cups Fresh Jute Leaves (Ewedu)',
+        '1 cup Palm Oil', '2 tbsp Crayfish & Iru', 'Fried Goat Meat & Buka Pepper Stew'
       ],
       instructions: [
-        'Boil peeled beans with water until mushy. Blend and sieve through mesh into smooth yellow paste. Simmer paste with palm oil, iru, and seasoning for Gbegiri.',
-        'Pick Ewedu leaves, boil in small water with kaun pinch until soft. Whisk vigorously with wooden broom or quick pulse blend.',
-        'Boil water in pot, gradually whisk in Elubo powder until smooth dark Amala forms. Steam on low heat for 5 mins.',
-        'Ladle piping hot Amala into bowl, top with Gbegiri, poured Ewedu, and spoonful of spicy buka stew!'
+        'Boil peeled beans until mushy, blend & sieve for yellow Gbegiri.', 'Whisk boiled Ewedu leaves with broom.',
+        'Whisk Elubo powder into boiling water for dark smooth Amala.', 'Serve hot with Gbegiri, Ewedu, and buka stew.'
       ],
-      proTip: 'Serve piping hot; the magic of Amala is eating it immediately after turning.'
+      proTip: 'Serve piping hot; Amala is best enjoyed immediately after turning.'
     }
   },
 
-  // 5. OFADA RICE & AYAMASE
+  // 6. OFADA RICE & AYAMASE
   {
-    id: 'dish-ng-5',
+    id: 'dish-ng-6',
     cityId: 'lagos',
+    category: 'rice-grains',
     name: 'Ofada Rice with Ayamase (Green Pepper Stew & Boiled Egg)',
     restaurantId: 'rest-ng-5',
     restaurantName: 'Bukka Hut',
     neighborhood: 'Lekki Phase 1',
     price: 6500,
     signatureScore: 9.6,
-    dietary: ['halal'],
+    dietary: ['rice-grains', 'halal'],
     mealType: 'Lunch',
     mood: 'buka-spot',
     description: 'Unpolished short-grain fermented local Ofada rice served in green plantain leaves with fiery bleached palm oil green pepper stew, assorted meat chunks, and hardboiled egg.',
@@ -224,42 +208,31 @@ export const MOCK_DISHES = [
     image: '/images/ofada_rice_1789406623409.png',
     mapCoords: { x: 72, y: 52 },
     recipe: {
-      prepTime: '20 mins',
-      cookTime: '50 mins',
-      difficulty: 'Intermediate',
-      servings: '4 servings',
+      prepTime: '20 mins', cookTime: '50 mins', difficulty: 'Intermediate', servings: '4 servings',
       ingredients: [
-        '3 cups Local Ofada Rice (washed thoroughly)',
-        '10 Green Bell Peppers (Green Tatashe)',
-        '6 Green Scotch Bonnets (Rodo)',
-        '1.5 cups Red Palm Oil (for bleaching)',
-        '3 tbsp Locust Beans (Iru woro)',
-        '2 cups Chopped Boiled Assorted Meats (Kpomo, Shaki, Beef)',
-        '4 Hard-boiled Eggs'
+        '3 cups Local Ofada Rice', '10 Green Tatashe Peppers', '6 Green Rodo Peppers', '1.5 cups Red Palm Oil',
+        '3 tbsp Iru', 'Assorted Meats & Hard-boiled Eggs'
       ],
       instructions: [
-        'Coarsely blend green peppers and onions. Boil off excess liquid.',
-        'Pour palm oil into pot, cover with tight lid, bleach on medium heat for 10-12 mins until smokey brown. Let cool slightly before opening!',
-        'Fry sliced onions and iru in bleached oil until golden.',
-        'Add green pepper paste, crayfish, and seasoning. Fry for 20 mins until oil floats.',
-        'Stir in boiled meats and hardboiled eggs. Simmer for 10 mins.',
-        'Serve hot over steamed Ofada rice lined inside fresh green Uma leaves.'
+        'Bleach palm oil covered for 10 mins until clear brown.', 'Fry onions and iru in oil.',
+        'Add green pepper paste and fry 20 mins until oil floats.', 'Fold in boiled meats and hard-boiled eggs.'
       ],
-      proTip: 'Always let bleached palm oil cool covered before lifting lid to avoid smoke flare-ups.'
+      proTip: 'Always let bleached palm oil cool covered before opening to avoid smoke.'
     }
   },
 
-  // 6. FISHERMAN SOUP
+  // 7. FISHERMAN SOUP
   {
-    id: 'dish-ng-6',
+    id: 'dish-ng-7',
     cityId: 'abuja',
+    category: 'swallow-soups',
     name: 'Fisherman Soup with Fresh Catfish, Sea Prawns & Periwinkle',
     restaurantId: 'rest-ng-6',
     restaurantName: 'Nkoyo Restaurant',
     neighborhood: 'Maitama',
     price: 13500,
     signatureScore: 9.9,
-    dietary: ['pescatarian', 'gluten-free'],
+    dietary: ['swallow-soups', 'pescatarian'],
     mealType: 'Dinner',
     mood: 'date-night',
     description: 'Rich Coastal Niger-Delta seafood broth simmered with fresh live catfish chunks, giant tiger prawns, unshelled periwinkles, fresh pepper, and oziza leaves.',
@@ -267,42 +240,32 @@ export const MOCK_DISHES = [
     image: '/images/fisherman_soup_1789406664662.png',
     mapCoords: { x: 38, y: 32 },
     recipe: {
-      prepTime: '20 mins',
-      cookTime: '30 mins',
-      difficulty: 'Master Chef',
-      servings: '4 servings',
+      prepTime: '20 mins', cookTime: '30 mins', difficulty: 'Master Chef', servings: '4 servings',
       ingredients: [
-        '1 large Fresh Live Catfish (cleaned with hot water & lemon)',
-        '8 Giant Tiger Prawns (deveined)',
-        '1 cup Periwinkles in Shells',
-        '3 Boiled Cocoyams (pounded into smooth paste)',
-        '1/2 cup Palm Oil',
-        '3 tbsp Ground Crayfish',
-        '2 Fresh Yellow Pepper / Rodo',
-        '1 handful Fresh Uziza Leaves (chiffonade)'
+        '1 Fresh Live Catfish', '8 Tiger Prawns', '1 cup Periwinkles', '3 Boiled Cocoyams (pounded paste)',
+        '1/2 cup Palm Oil', '3 tbsp Crayfish', 'Uziza Leaves'
       ],
       instructions: [
-        'Boil 4 cups water in pot with palm oil, yellow pepper, crayfish, and seasoning.',
-        'Add small cocoyam paste balls to thicken the broth gently.',
-        'Carefully add catfish steaks, prawns, and periwinkles.',
-        'Simmer gently on medium heat for 12-15 minutes without aggressive stirring so catfish stays intact.',
-        'Stir in fresh uziza leaves, turn off heat, and let residual steam infuse herbs!'
+        'Boil water with palm oil, pepper, crayfish, and cocoyam paste balls.',
+        'Add fresh catfish, prawns, and periwinkles gently.', 'Simmer low heat 15 mins without stirring aggressively.',
+        'Stir in fresh uziza leaves.'
       ],
-      proTip: 'Do not over-stir fresh catfish; shake the pot gently by handles to mix.'
+      proTip: 'Shake the pot gently by handles rather than stirring catfish to keep steaks intact.'
     }
   },
 
-  // 7. BOLI & ROASTED TILAPIA FISH
+  // 8. BOLI & ROASTED TILAPIA FISH
   {
-    id: 'dish-ng-7',
+    id: 'dish-ng-8',
     cityId: 'abuja',
+    category: 'pepper-soups',
     name: 'Boli (Roasted Plantain) & Charcoal Roasted Tilapia Fish',
     restaurantId: 'rest-ng-7',
     restaurantName: 'Bantu Delicacies & Lounge',
     neighborhood: 'Jabi',
     price: 7500,
     signatureScore: 9.7,
-    dietary: ['pescatarian', 'gluten-free'],
+    dietary: ['pepper-soups', 'pescatarian'],
     mealType: 'Dinner',
     mood: 'casual-quick',
     description: 'Charcoal roasted ripe plantain fingers paired with whole grilled spiced Tilapia fish, palm oil pepper dip, and roasted peanuts.',
@@ -310,40 +273,29 @@ export const MOCK_DISHES = [
     image: '/images/boli_fish_1789406721483.png',
     mapCoords: { x: 58, y: 48 },
     recipe: {
-      prepTime: '20 mins',
-      cookTime: '30 mins',
-      difficulty: 'Intermediate',
-      servings: '2 servings',
-      ingredients: [
-        '2 semi-ripe Yellow Plantains (peeled)',
-        '1 Whole Tilapia Fish (scored along flanks)',
-        '1/3 cup Palm Oil',
-        '4 Fresh Scotch Bonnet Peppers (blended)',
-        '2 Garlic Cloves & 1 inch Ginger (grated)',
-        '1 Red Onion (sliced)',
-        '1 tbsp Crayfish Powder'
-      ],
+      prepTime: '20 mins', cookTime: '30 mins', difficulty: 'Intermediate', servings: '2 servings',
+      ingredients: ['2 Yellow Plantains', '1 Tilapia Fish', '1/3 cup Palm Oil', '4 Scotch Bonnets', 'Ginger & Garlic'],
       instructions: [
-        'Mix blended peppers, garlic, ginger, crayfish, salt, and half palm oil into rub paste.',
-        'Coat Tilapia fish thoroughly inside cavity and outside cuts. Roast on medium charcoal wire rack for 25 mins.',
-        'Place peeled plantains directly on grill wire. Turn every 4 mins until roasted golden yellow with dark blister spots.',
-        'Warm remaining palm oil with chopped onions and pepper sauce for dipping.'
+        'Marinate fish in spiced rub, roast on charcoal wire rack 25 mins.',
+        'Roast peeled plantains directly on grill wire until golden with blister spots.',
+        'Serve with spicy palm oil onion dipping sauce.'
       ],
-      proTip: 'Semi-ripe yellow plantains give the ideal balance of natural sweetness and firm texture.'
+      proTip: 'Semi-ripe yellow plantains give the ideal sweetness and firm grill texture.'
     }
   },
 
-  // 8. NKWOBI IN WOODEN MORTAR BOWL
+  // 9. NKWOBI IN WOODEN MORTAR
   {
-    id: 'dish-ng-8',
+    id: 'dish-ng-9',
     cityId: 'abuja',
+    category: 'pepper-soups',
     name: 'Nkwobi (Spicy Cow Foot Delicacy in Wooden Mortar Bowl)',
     restaurantId: 'rest-ng-8',
     restaurantName: 'Jovinik Bukka',
     neighborhood: 'Wuse II',
     price: 8000,
     signatureScore: 9.6,
-    dietary: ['halal', 'gluten-free'],
+    dietary: ['pepper-soups', 'halal'],
     mealType: 'Late-Night',
     mood: 'group-feast',
     description: 'Tender cow foot cooked in thick golden potash-emulsified palm oil sauce, garnished with Utazi leaf chiffonade and raw onion rings.',
@@ -351,42 +303,118 @@ export const MOCK_DISHES = [
     image: '/images/nkwobi_mortar_1789406779375.png',
     mapCoords: { x: 45, y: 22 },
     recipe: {
-      prepTime: '15 mins',
-      cookTime: '60 mins',
-      difficulty: 'Intermediate',
-      servings: '4 servings',
-      ingredients: [
-        '1 kg Cow Foot (chopped into small bite-size cubes)',
-        '1/2 cup Red Palm Oil',
-        '1 tsp Edible Potash Liquid (Akanwu or Ngu)',
-        '2 tbsp Ground Ehuru (African Nutmeg)',
-        '2 tbsp Crayfish Powder',
-        '2 Yellow Scotch Bonnet Peppers',
-        'Fresh Utazi Leaves (sliced thin)',
-        '1 Red Onion (sliced into rings for garnish)'
-      ],
+      prepTime: '15 mins', cookTime: '60 mins', difficulty: 'Intermediate', servings: '4 servings',
+      ingredients: ['1 kg Cow Foot', '1/2 cup Palm Oil', '1 tsp Potash Liquid (Akanwu)', '2 tbsp Ground Ehuru', 'Utazi Leaves & Red Onion'],
       instructions: [
-        'Pressure cook cow foot with onions and seasoning cubes until soft and gelatinous.',
-        'In a bowl, pour palm oil. Slowly add clear potash liquid while stirring until oil turns thick yellow paste.',
-        'Stir in ground Ehuru, crayfish, blended yellow pepper, and cooked cow foot pieces.',
-        'Mix thoroughly until meat is thoroughly coated in yellow cream sauce.',
-        'Serve in traditional carved wooden bowl (Akwa), topped with Utazi slices and onion rings.'
+        'Pressure cook cow foot until tender.', 'Stir clear potash liquid into palm oil until yellow cream paste forms.',
+        'Mix in ehuru nutmeg, pepper, crayfish, and tender cow foot.', 'Serve in carved wooden mortar bowl with utazi.'
       ],
-      proTip: 'Ehuru (calabash nutmeg) roasted over flame before grinding gives Nkwobi its unmistakable aroma.'
+      proTip: 'Flame-roasting Ehuru nutmeg before grinding unleashes its full aromatic oil.'
     }
   },
 
-  // 9. EWA AGANYIN WITH AGEGE BREAD
+  // 10. SPICY BEEF SUYA
   {
-    id: 'dish-ng-9',
+    id: 'dish-ng-10',
     cityId: 'lagos',
+    category: 'pepper-soups',
+    name: 'Spicy Beef Suya with Yaji Pepper & Sliced Onions',
+    restaurantId: 'rest-ng-3',
+    restaurantName: 'University of Suya',
+    neighborhood: 'Ikeja',
+    price: 4500,
+    signatureScore: 9.7,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Late-Night',
+    mood: 'late-night',
+    description: 'Thinly sliced tender beef skewered over open charcoal grill, heavily coated in authentic Northern Yaji spice (kuli-kuli, ginger, chili, garlic).',
+    chefNote: 'Grilled over hardwood embers for crisp caramelized spice crust.',
+    image: '/images/beef_suya_1789406566456.png',
+    mapCoords: { x: 30, y: 25 },
+    recipe: {
+      prepTime: '20 mins', cookTime: '15 mins', difficulty: 'Easy', servings: '4 servings',
+      ingredients: ['700g Beef Tenderloin (thin strips)', '1 cup Yaji Spice Blend (Kuli-kuli, ginger, chili)', 'Peanut Oil', 'Red Onions'],
+      instructions: [
+        'Thread beef strips onto wooden skewers.', 'Coat with oil and press heavily into Yaji spice blend.',
+        'Grill over high heat 6-8 mins per side.', 'Serve in foil with sliced onions and extra Yaji powder.'
+      ],
+      proTip: 'Slice beef against the grain while semi-frozen for paper-thin tender strips.'
+    }
+  },
+
+  // 11. PEPPERED SNAIL
+  {
+    id: 'dish-ng-11',
+    cityId: 'lagos',
+    category: 'pepper-soups',
+    name: 'Spicy Peppered Snails (Giant African Land Snail)',
+    restaurantId: 'rest-ng-1',
+    restaurantName: 'Terra Kulture Restaurant',
+    neighborhood: 'Victoria Island',
+    price: 11000,
+    signatureScore: 9.8,
+    dietary: ['pepper-soups', 'halal'],
+    mealType: 'Late-Night',
+    mood: 'date-night',
+    description: 'Crunchy jumbo African land snails sauteed in fiery coarse red rodo-tatashe pepper sauce, onions, and aromatic herbs.',
+    chefNote: 'Washed thoroughly with alum and lemon juice to remove all slime.',
+    image: '/images/peppered_snail_1789425119819.png',
+    mapCoords: { x: 42, y: 58 },
+    recipe: {
+      prepTime: '30 mins', cookTime: '25 mins', difficulty: 'Intermediate', servings: '3 servings',
+      ingredients: ['6 Jumbo Giant Snails', '5 Scotch Bonnets', '4 Red Bell Peppers', '1 cup Vegetable Oil', '1 Red Onion'],
+      instructions: [
+        'Clean snails with lime/alum, boil with seasoning for 15 mins.',
+        'Coarsely blend peppers and onions.', 'Fry pepper sauce in oil for 15 mins.',
+        'Toss boiled snails into hot pepper sauce for 8 mins until coated and glossy.'
+      ],
+      proTip: 'Boiling snails with onions and garlic before stir-frying infuses savory depth.'
+    }
+  },
+
+  // 12. STEAMED MOI MOI
+  {
+    id: 'dish-ng-12',
+    cityId: 'lagos',
+    category: 'snacks-street',
+    name: 'Steamed Leaf Moi Moi (Bean Pudding with Boiled Egg & Fish)',
+    restaurantId: 'rest-ng-5',
+    restaurantName: 'Bukka Hut',
+    neighborhood: 'Lekki Phase 1',
+    price: 2500,
+    signatureScore: 9.6,
+    dietary: ['snacks-street', 'halal'],
+    mealType: 'Breakfast & Lunch',
+    mood: 'casual-quick',
+    description: 'Velvety steamed brown bean pudding seasoned with crayfish, peppers, and palm oil, wrapped inside Ewe Eran leaves with quartered hardboiled egg and mackerel flakes.',
+    chefNote: 'Wrapped in native green leaves for authentic earthen aroma.',
+    image: '/images/moi_moi_1789425190764.png',
+    mapCoords: { x: 72, y: 52 },
+    recipe: {
+      prepTime: '30 mins', cookTime: '45 mins', difficulty: 'Intermediate', servings: '4 servings',
+      ingredients: ['3 cups Peeled Brown Beans', '3 Red Bell Peppers', '1/2 cup Vegetable/Palm Oil', 'Crayfish', 'Hard-boiled Eggs', 'Smoked Fish'],
+      instructions: [
+        'Blend peeled beans with peppers and onions into smooth batter.',
+        'Whisk in oil, warm water, crayfish, and seasoning until fluffy.',
+        'Pour into washed green leaves or foil ramekins, add boiled egg slice and fish flakes.',
+        'Steam in covered pot over medium heat for 45 mins.'
+      ],
+      proTip: 'Whisking air into the bean batter before wrapping ensures a light soufflé-like texture.'
+    }
+  },
+
+  // 13. EWA AGANYIN & AGEGE BREAD
+  {
+    id: 'dish-ng-13',
+    cityId: 'lagos',
+    category: 'beans-yam',
     name: 'Ewa Aganyin with Spicy Dark Pepper Sauce & Agege Bread',
     restaurantId: 'rest-ng-5',
     restaurantName: 'Bukka Hut',
     neighborhood: 'Yaba',
     price: 3500,
     signatureScore: 9.5,
-    dietary: ['vegetarian', 'halal'],
+    dietary: ['beans-yam', 'vegetarian'],
     mealType: 'Breakfast & Lunch',
     mood: 'casual-quick',
     description: 'Soft mashed honey beans (Ewa Oloyin) smothered in iconic dark fried palm oil pepper sauce made with caramelized onions and dry chili peppers, served with warm Agege bread.',
@@ -394,39 +422,30 @@ export const MOCK_DISHES = [
     image: '/images/ewa_aganyin_bread_1789406842679.png',
     mapCoords: { x: 48, y: 42 },
     recipe: {
-      prepTime: '15 mins',
-      cookTime: '55 mins',
-      difficulty: 'Easy',
-      servings: '4 servings',
-      ingredients: [
-        '3 cups Honey Beans (Ewa Oloyin)',
-        '1.5 cups Red Palm Oil',
-        '3 large Red Onions (sliced thinly)',
-        '1/2 cup Dried Shombo / Chili Peppers (soaked and blended coarse)',
-        '2 tbsp Crayfish Powder',
-        '1 Loaf Fresh Soft Agege Bread'
-      ],
+      prepTime: '15 mins', cookTime: '55 mins', difficulty: 'Easy', servings: '4 servings',
+      ingredients: ['3 cups Honey Beans', '1.5 cups Palm Oil', '3 Red Onions', '1/2 cup Dried Chili Peppers', 'Agege Bread'],
       instructions: [
-        'Pressure cook beans with salt until ultra-soft and mashable. Mash lightly with wooden spoon.',
-        'Heat palm oil in pot. Add sliced onions and fry on medium-low for 20 mins until dark brown (almost blackened).',
-        'Add coarse dried pepper paste and crayfish. Fry continuously on low heat until oil turns dark brown and separates.',
-        'Ladle piping hot mashed beans into plate, top with dark Aganyin sauce, and enjoy with thick slices of Agege bread.'
+        'Pressure cook beans until ultra-soft and mash lightly.',
+        'Fry sliced onions in palm oil for 20 mins until dark brown.',
+        'Add coarse pepper paste and crayfish, fry low heat until oil turns dark brown.',
+        'Ladle over hot beans and serve with Agege bread.'
       ],
-      proTip: 'Caramelizing the onions slowly until deep brown is the absolute secret to authentic Aganyin taste.'
+      proTip: 'Slow caramelizing onions until deep brown is the secret to authentic Aganyin taste.'
     }
   },
 
-  // 10. CATFISH PEPPER SOUP
+  // 14. CATFISH PEPPER SOUP
   {
-    id: 'dish-ng-10',
+    id: 'dish-ng-14',
     cityId: 'lagos',
+    category: 'pepper-soups',
     name: 'Catfish Pepper Soup (Point & Kill) with Fresh Scent Leaves',
     restaurantId: 'rest-ng-3',
     restaurantName: 'University of Suya',
     neighborhood: 'Ikeja',
     price: 8500,
     signatureScore: 9.7,
-    dietary: ['pescatarian', 'gluten-free', 'halal'],
+    dietary: ['pepper-soups', 'pescatarian'],
     mealType: 'Late-Night',
     mood: 'late-night',
     description: 'Steaming fresh catfish steaks cooked in traditional spicy herbal clear broth infused with Uda pods, Utazi, fresh scent leaves (Efirin), and yellow scotch bonnets.',
@@ -434,24 +453,14 @@ export const MOCK_DISHES = [
     image: '/images/catfish_peppersoup_1789406922178.png',
     mapCoords: { x: 32, y: 28 },
     recipe: {
-      prepTime: '15 mins',
-      cookTime: '20 mins',
-      difficulty: 'Easy',
-      servings: '2 servings',
-      ingredients: [
-        '1 Medium Fresh Live Catfish (sliced into steaks, washed with lime)',
-        '2 tbsp Pepper Soup Spice Blend (Uda, Gbafilo, Umilo, Ehuru)',
-        '3 Yellow Scotch Bonnet Peppers (chopped)',
-        '1 handful Fresh Scent Leaves (Efirin / African Basil)',
-        '1 medium Red Onion (chopped)',
-        '2 tbsp Ground Crayfish'
-      ],
+      prepTime: '15 mins', cookTime: '20 mins', difficulty: 'Easy', servings: '2 servings',
+      ingredients: ['1 Fresh Catfish', '2 tbsp Pepper Soup Spice', '3 Yellow Bonnets', 'Scent Leaves (Efirin)', 'Crayfish'],
       instructions: [
-        'Place catfish steaks in pot. Add 4 cups water, onions, pepper soup spice blend, crayfish, and chopped peppers.',
-        'Bring to boil on medium heat for 12-15 minutes until fish turns opaque white.',
-        'Toss in fresh scent leaves, adjust salt, simmer for 2 minutes and serve hot in a black clay bowl.'
+        'Place catfish steaks in pot with water, onions, spices, and peppers.',
+        'Boil medium heat 15 mins until fish turns opaque.',
+        'Toss in scent leaves, simmer 2 mins and serve hot.'
       ],
-      proTip: 'Washing catfish with hot water or fresh lime removes all slipperiness before cooking.'
+      proTip: 'Washing catfish with hot water or fresh lime removes all slipperiness.'
     }
   }
 ];
@@ -473,11 +482,8 @@ export const MOCK_RESTAURANTS = [
     image: '/images/jollof_rice_dodo_1789406504058.png',
     mapCoords: { x: 42, y: 58 },
     travelInfo: {
-      distanceKm: '8.4 km',
-      travelTimeMinutes: 22,
-      primaryRoute: 'via Ozumba Mbadiwe Ave & Ahmadu Bello Way',
-      uberFare: '₦3,800 - ₦4,500',
-      brtOption: 'Take VI Direct Bus from CMS Terminal'
+      distanceKm: '8.4 km', travelTimeMinutes: 22, primaryRoute: 'via Ozumba Mbadiwe Ave & Ahmadu Bello Way',
+      uberFare: '₦3,800 - ₦4,500', brtOption: 'Take VI Direct Bus from CMS Terminal'
     }
   },
   {
@@ -496,11 +502,8 @@ export const MOCK_RESTAURANTS = [
     image: '/images/egusi_pounded_yam_1789406535718.png',
     mapCoords: { x: 55, y: 48 },
     travelInfo: {
-      distanceKm: '6.2 km',
-      travelTimeMinutes: 18,
-      primaryRoute: 'via Alfred Rewane Rd & Kingsway',
-      uberFare: '₦3,000 - ₦3,800',
-      brtOption: 'Ikoyi Link Bridge Shuttle'
+      distanceKm: '6.2 km', travelTimeMinutes: 18, primaryRoute: 'via Alfred Rewane Rd & Kingsway',
+      uberFare: '₦3,000 - ₦3,800', brtOption: 'Ikoyi Link Bridge Shuttle'
     }
   },
   {
@@ -519,11 +522,8 @@ export const MOCK_RESTAURANTS = [
     image: '/images/beef_suya_1789406566456.png',
     mapCoords: { x: 30, y: 25 },
     travelInfo: {
-      distanceKm: '14.5 km',
-      travelTimeMinutes: 35,
-      primaryRoute: 'via Mobolaji Bank Anthony Way',
-      uberFare: '₦4,500 - ₦5,800',
-      brtOption: 'Ikeja Bus Terminal Route 2'
+      distanceKm: '14.5 km', travelTimeMinutes: 35, primaryRoute: 'via Mobolaji Bank Anthony Way',
+      uberFare: '₦4,500 - ₦5,800', brtOption: 'Ikeja Bus Terminal Route 2'
     }
   },
   {
@@ -542,11 +542,8 @@ export const MOCK_RESTAURANTS = [
     image: '/images/amala_ewedu_1789406591510.png',
     mapCoords: { x: 38, y: 68 },
     travelInfo: {
-      distanceKm: '11.0 km',
-      travelTimeMinutes: 28,
-      primaryRoute: 'via Western Ave & Funsho Williams Ave',
-      uberFare: '₦3,200 - ₦4,000',
-      brtOption: 'Surulere Local Bus'
+      distanceKm: '11.0 km', travelTimeMinutes: 28, primaryRoute: 'via Western Ave & Funsho Williams Ave',
+      uberFare: '₦3,200 - ₦4,000', brtOption: 'Surulere Local Bus'
     }
   },
   {
@@ -565,11 +562,8 @@ export const MOCK_RESTAURANTS = [
     image: '/images/ofada_rice_1789406623409.png',
     mapCoords: { x: 72, y: 52 },
     travelInfo: {
-      distanceKm: '4.8 km',
-      travelTimeMinutes: 14,
-      primaryRoute: 'via Admiralty Way Lekki',
-      uberFare: '₦2,500 - ₦3,200',
-      brtOption: 'Lekki Shuttle Bus'
+      distanceKm: '4.8 km', travelTimeMinutes: 14, primaryRoute: 'via Admiralty Way Lekki',
+      uberFare: '₦2,500 - ₦3,200', brtOption: 'Lekki Shuttle Bus'
     }
   },
   {
@@ -588,11 +582,8 @@ export const MOCK_RESTAURANTS = [
     image: '/images/fisherman_soup_1789406664662.png',
     mapCoords: { x: 38, y: 32 },
     travelInfo: {
-      distanceKm: '7.1 km',
-      travelTimeMinutes: 15,
-      primaryRoute: 'via Shehu Shagari Way & Transcorp Hilton Drive',
-      uberFare: '₦2,800 - ₦3,500',
-      brtOption: 'Maitama Express Shuttle'
+      distanceKm: '7.1 km', travelTimeMinutes: 15, primaryRoute: 'via Shehu Shagari Way & Transcorp Hilton Drive',
+      uberFare: '₦2,800 - ₦3,500', brtOption: 'Maitama Express Shuttle'
     }
   }
 ];
@@ -604,10 +595,9 @@ export const EDITORIAL_GUIDES = [
     title: 'The Legendary Amala & Buka Spots of Lagos',
     subtitle: 'From Surulere Shitta to Victoria Island: where to find silky dark Amala, piping hot Ewedu, and tender Ogunfe goat meat.',
     curator: 'Tunde Bakare, Lagos Food Critic',
-    dishCount: 6,
-    readTime: '4 min read',
+    dishCount: 6, readTime: '4 min read',
     coverImage: '/images/amala_ewedu_1789406591510.png',
-    featuredDishIds: ['dish-ng-4', 'dish-ng-5']
+    featuredDishIds: ['dish-ng-5', 'dish-ng-6']
   },
   {
     id: 'guide-ng-2',
@@ -615,10 +605,9 @@ export const EDITORIAL_GUIDES = [
     title: 'Mastering the Art of Smokey Party Jollof Rice',
     subtitle: 'Secrets of firewood smoke, tatashe pepper reduction, and perfect parboiled long-grain rice.',
     curator: 'Chef Yemisi Lawson',
-    dishCount: 4,
-    readTime: '5 min read',
+    dishCount: 4, readTime: '5 min read',
     coverImage: '/images/jollof_rice_dodo_1789406504058.png',
-    featuredDishIds: ['dish-ng-1', 'dish-ng-3']
+    featuredDishIds: ['dish-ng-1', 'dish-ng-2', 'dish-ng-10']
   },
   {
     id: 'guide-ng-3',
@@ -626,9 +615,8 @@ export const EDITORIAL_GUIDES = [
     title: 'Abuja Seafood & Niger-Delta Delicacies Guide',
     subtitle: 'Fresh live catfish fisherman soups, pounded yam egusi, and charcoal roasted Boli fish spots in Maitama & Jabi.',
     curator: 'Amina Bello, Abuja Taste Journal',
-    dishCount: 5,
-    readTime: '4 min read',
+    dishCount: 5, readTime: '4 min read',
     coverImage: '/images/fisherman_soup_1789406664662.png',
-    featuredDishIds: ['dish-ng-6', 'dish-ng-7', 'dish-ng-8']
+    featuredDishIds: ['dish-ng-7', 'dish-ng-8', 'dish-ng-9']
   }
 ];
