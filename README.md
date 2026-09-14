@@ -1,16 +1,55 @@
-# React + Vite
+# Culinaria — Naija Edition 🇳🇬
+> Authentic Nigerian Food, Restaurant & Recipe Discovery Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Culinaria (Naija Edition)** is an editorial-grade web application built to help food lovers discover extraordinary Nigerian signature dishes, dining venues, interactive map directions, and traditional home cooking recipes across major Nigerian cities (**Lagos, Abuja, Port Harcourt, Ibadan**).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features & Highlights
 
-## React Compiler
+- 🍲 **Food-First Discovery**: Search & discover iconic Nigerian dishes (*Smokey Party Jollof Rice*, *Pounded Yam & Egusi*, *Spicy Beef Suya*, *Amala, Ewedu & Gbegiri*, *Ofada Rice & Ayamase*, *Fisherman Soup*, *Boli & Roasted Fish*, *Nkwobi*, *Ewa Aganyin*, *Catfish Pepper Soup*) matched with 100% realistic food photography.
+- 🏢 **Venue Discovery**: Explore top-rated Nigerian restaurants, heritage Buka joints, suya grills, and fine dining venues.
+- 🗺️ **Interactive Directions Map Modal**: Click "Directions" on any dish or restaurant to open a pop-up modal showing step-by-step navigation, distance, travel time, and **Uber/Bolt fare estimates in Naira (`₦`)**.
+- 🍳 **Traditional Nigerian Cooking Recipes**: Step-by-step home recipes with interactive ingredient checklists (*Tatashe, Rodo, Ugu, Stockfish, Iru, Crayfish*) and Master Chef secret tips.
+- 🇳🇬 **Nigerian City & Neighborhood Filtering**: Explore by neighborhood across Victoria Island, Ikoyi, Lekki Phase 1, Ikeja, Yaba, Surulere, Maitama, Wuse II, and Jabi.
+- 📓 **Tastemaker Notebook**: Save items to your personal list with `localStorage` persistence and export your food itinerary as a text file.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🛠️ Technology Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **Core**: React 18, Vite 8, JavaScript
+- **Styling**: Modern CSS Design System (Restrained 4–6px button radius, 8–12px card corners, warm organic neutral palette `#FAF8F5`, zero neon or purple decorative gradients)
+- **Icons**: Lucide Icons (`lucide-react`)
+
+---
+
+## 🚀 Getting Started Locally
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/heisemmanuell/city-food-discover.git
+   cd city-food-discover
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start local development server**:
+   ```bash
+   npm run dev
+   ```
+   Open your browser at `http://localhost:5173`.
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📄 License
+
+MIT License © 2026 Chidindu Emmanuel
